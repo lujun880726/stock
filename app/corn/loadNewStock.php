@@ -31,6 +31,11 @@ for ($i = 1; $i <= $page; $i++) {
 // 每天的收盘信息 停盘不记录
 $list = $objBase->db->get_all("select * from `stock` where 1");
 foreach ($list as $val){
+    $url = "http://qt.gtimg.cn/r=0.23181622646317246q=marketStat,stdunixtime," . $val['type'].$val['stock_id'].",";
+    $url = "http://qt.gtimg.cn/0.694636271243858q=sh600160,s_pksh600160";
+
+    $data = file_get_contents($url);
+    print_r($data);exit;
 }
 var_dump($list);exit;
 
