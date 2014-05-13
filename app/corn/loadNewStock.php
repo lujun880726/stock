@@ -1,6 +1,6 @@
 <?php
 if (!ROOT_CORN){
-    include 'init.php';
+    include '../../web/init.php';
 }
 
 $objBase = m('m_base');
