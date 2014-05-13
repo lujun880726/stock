@@ -53,7 +53,7 @@ foreach ($list as $val) {
         'stock_id'  => $val['stock_id'],
         'type'      => $val['type'],
         'day_time'  => date('Ymd'),
-        'week_time' => date('Ymd'),
+        'week_time' => date('YW'),
         'mon_time'  => date('Ym'),
         'year_time' => date('Y'),
         'open'      => $tmp[5],
