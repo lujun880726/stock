@@ -47,7 +47,7 @@ foreach ($list as $val) {
 
     $tmp  = explode('~', $data);
     if (!$val['name']) {
-        $objBase->db->update('stock', array('name' => $tmp[1]), "stock_id = '" . $val['stock_id'] . "'");
+        $objBase->db->update('stock', array('name' => iconv("GB2312","utf-8",$tmp[1])), "stock_id = '" . $val['stock_id'] . "'");//
     }
     $dayArr = array(
         'stock_id'  => $val['stock_id'],
