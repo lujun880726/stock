@@ -1,9 +1,9 @@
 <?php
+set_time_limi(0);
 
 include '../../web/init.php';
 
 $objBase = m('m_base');
-
 
 //添加每天新的股票
 $page = 100;
