@@ -7,7 +7,6 @@ $objBase = m('m_base');
 
 //添加每天新的股票
 $page = 100;
-$page = 0;
 $url  = 'http://stock.gtimg.cn/data/index.php?appn=rank&t=ranka/chr&o=0&l=80&v=list_data&p=';
 for ($i = 1; $i <= $page; $i++) {
     $endUrl = $url . $i;
