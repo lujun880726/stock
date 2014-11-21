@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2014-11-21 15:22:30
+Date: 2014-11-21 17:44:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -37,6 +37,51 @@ CREATE TABLE `day_harvest_info` (
 -- ----------------------------
 -- Records of day_harvest_info
 -- ----------------------------
+INSERT INTO `day_harvest_info` VALUES ('000001', 'sz', '20141121', '201447', '201411', '2014', '10.620', '10.860', '10.500', '10.800', '1146732');
+INSERT INTO `day_harvest_info` VALUES ('000002', 'sz', '20141121', '201447', '201411', '2014', '9.230', '9.380', '9.180', '9.370', '795802');
+INSERT INTO `day_harvest_info` VALUES ('000004', 'sz', '20141121', '201447', '201411', '2014', '22.180', '23.170', '22.150', '22.990', '22322');
+INSERT INTO `day_harvest_info` VALUES ('000005', 'sz', '20141121', '201447', '201411', '2014', '3.700', '3.920', '3.670', '3.820', '311708');
+INSERT INTO `day_harvest_info` VALUES ('000006', 'sz', '20141121', '201447', '201411', '2014', '6.160', '6.220', '6.020', '6.070', '411412');
+INSERT INTO `day_harvest_info` VALUES ('000007', 'sz', '20141121', '201447', '201411', '2014', '16.270', '16.500', '16.210', '16.350', '17272');
+INSERT INTO `day_harvest_info` VALUES ('000008', 'sz', '20141121', '201447', '201411', '2014', '24.700', '25.490', '24.450', '24.800', '38737');
+INSERT INTO `day_harvest_info` VALUES ('000009', 'sz', '20141121', '201447', '201411', '2014', '12.470', '12.490', '12.290', '12.370', '195749');
+INSERT INTO `day_harvest_info` VALUES ('000010', 'sz', '20141121', '201447', '201411', '2014', '7.620', '7.720', '7.580', '7.650', '49038');
+INSERT INTO `day_harvest_info` VALUES ('000011', 'sz', '20141121', '201447', '201411', '2014', '9.280', '9.740', '9.210', '9.520', '127944');
+INSERT INTO `day_harvest_info` VALUES ('000012', 'sz', '20141121', '201447', '201411', '2014', '7.880', '7.970', '7.850', '7.950', '212534');
+INSERT INTO `day_harvest_info` VALUES ('000014', 'sz', '20141121', '201447', '201411', '2014', '15.890', '16.020', '15.780', '15.980', '29861');
+INSERT INTO `day_harvest_info` VALUES ('000016', 'sz', '20141121', '201447', '201411', '2014', '6.350', '6.510', '6.280', '6.430', '171366');
+INSERT INTO `day_harvest_info` VALUES ('000017', 'sz', '20141121', '201447', '201411', '2014', '8.200', '8.350', '8.170', '8.330', '35292');
+INSERT INTO `day_harvest_info` VALUES ('000018', 'sz', '20141121', '201447', '201411', '2014', '16.450', '16.990', '16.420', '16.490', '15554');
+INSERT INTO `day_harvest_info` VALUES ('000019', 'sz', '20141121', '201447', '201411', '2014', '8.330', '8.770', '8.270', '8.650', '49746');
+INSERT INTO `day_harvest_info` VALUES ('000020', 'sz', '20141121', '201447', '201411', '2014', '0.000', '0.000', '0.000', '0.000', '0');
+INSERT INTO `day_harvest_info` VALUES ('000021', 'sz', '20141121', '201447', '201411', '2014', '7.610', '7.660', '7.460', '7.490', '337642');
+INSERT INTO `day_harvest_info` VALUES ('000022', 'sz', '20141121', '201447', '201411', '2014', '16.350', '16.960', '16.170', '16.610', '73146');
+INSERT INTO `day_harvest_info` VALUES ('000023', 'sz', '20141121', '201447', '201411', '2014', '0.000', '0.000', '0.000', '0.000', '0');
+INSERT INTO `day_harvest_info` VALUES ('000024', 'sz', '20141121', '201447', '201411', '2014', '12.830', '13.220', '12.730', '13.180', '385232');
+INSERT INTO `day_harvest_info` VALUES ('000025', 'sz', '20141121', '201447', '201411', '2014', '12.000', '12.350', '11.940', '12.300', '25361');
+INSERT INTO `day_harvest_info` VALUES ('000026', 'sz', '20141121', '201447', '201411', '2014', '9.600', '9.780', '9.600', '9.750', '39728');
+INSERT INTO `day_harvest_info` VALUES ('000027', 'sz', '20141121', '201447', '201411', '2014', '8.090', '8.340', '8.050', '8.310', '289835');
+INSERT INTO `day_harvest_info` VALUES ('000028', 'sz', '20141121', '201447', '201411', '2014', '46.070', '46.100', '45.400', '45.510', '7139');
+INSERT INTO `day_harvest_info` VALUES ('000029', 'sz', '20141121', '201447', '201411', '2014', '5.830', '6.010', '5.780', '5.940', '62697');
+INSERT INTO `day_harvest_info` VALUES ('000030', 'sz', '20141121', '201447', '201411', '2014', '7.790', '7.850', '7.710', '7.850', '59272');
+INSERT INTO `day_harvest_info` VALUES ('000031', 'sz', '20141121', '201447', '201411', '2014', '5.080', '5.150', '5.080', '5.120', '136099');
+INSERT INTO `day_harvest_info` VALUES ('000032', 'sz', '20141121', '201447', '201411', '2014', '12.830', '12.830', '12.630', '12.830', '132862');
+INSERT INTO `day_harvest_info` VALUES ('000033', 'sz', '20141121', '201447', '201411', '2014', '0.000', '0.000', '0.000', '0.000', '0');
+INSERT INTO `day_harvest_info` VALUES ('000034', 'sz', '20141121', '201447', '201411', '2014', '7.330', '7.420', '7.260', '7.380', '63978');
+INSERT INTO `day_harvest_info` VALUES ('000035', 'sz', '20141121', '201447', '201411', '2014', '13.420', '13.910', '13.410', '13.820', '80135');
+INSERT INTO `day_harvest_info` VALUES ('000036', 'sz', '20141121', '201447', '201411', '2014', '3.870', '4.010', '3.860', '3.970', '236309');
+INSERT INTO `day_harvest_info` VALUES ('000037', 'sz', '20141121', '201447', '201411', '2014', '6.080', '6.150', '6.040', '6.120', '36018');
+INSERT INTO `day_harvest_info` VALUES ('000038', 'sz', '20141121', '201447', '201411', '2014', '19.980', '20.590', '19.820', '20.270', '17274');
+INSERT INTO `day_harvest_info` VALUES ('000039', 'sz', '20141121', '201447', '201411', '2014', '17.480', '17.710', '17.300', '17.700', '164559');
+INSERT INTO `day_harvest_info` VALUES ('000040', 'sz', '20141121', '201447', '201411', '2014', '5.070', '5.150', '5.010', '5.150', '102086');
+INSERT INTO `day_harvest_info` VALUES ('000042', 'sz', '20141121', '201447', '201411', '2014', '12.400', '12.460', '12.260', '12.370', '39959');
+INSERT INTO `day_harvest_info` VALUES ('000043', 'sz', '20141121', '201447', '201411', '2014', '7.960', '8.070', '7.880', '8.000', '102173');
+INSERT INTO `day_harvest_info` VALUES ('000045', 'sz', '20141121', '201447', '201411', '2014', '9.730', '9.950', '9.730', '9.820', '35124');
+INSERT INTO `day_harvest_info` VALUES ('000046', 'sz', '20141121', '201447', '201411', '2014', '6.280', '6.480', '6.210', '6.370', '316152');
+INSERT INTO `day_harvest_info` VALUES ('000048', 'sz', '20141121', '201447', '201411', '2014', '10.440', '10.490', '10.190', '10.360', '54969');
+INSERT INTO `day_harvest_info` VALUES ('000049', 'sz', '20141121', '201447', '201411', '2014', '35.580', '35.580', '35.000', '35.260', '43340');
+INSERT INTO `day_harvest_info` VALUES ('000050', 'sz', '20141121', '201447', '201411', '2014', '22.500', '22.770', '22.400', '22.670', '172487');
+INSERT INTO `day_harvest_info` VALUES ('000055', 'sz', '20141121', '201447', '201411', '2014', '10.570', '10.760', '10.520', '10.610', '45537');
 
 -- ----------------------------
 -- Table structure for `stock`
@@ -56,70 +101,66 @@ CREATE TABLE `stock` (
 -- ----------------------------
 INSERT INTO `stock` VALUES ('000001', 'sz', '平安银行', '1400055390');
 INSERT INTO `stock` VALUES ('000002', 'sz', '万  科Ａ', '1400055380');
-INSERT INTO `stock` VALUES ('000004', 'sz', '', '1400055472');
+INSERT INTO `stock` VALUES ('000004', 'sz', '国农科技', '1400055472');
 INSERT INTO `stock` VALUES ('000005', 'sz', '世纪星源', '1400055387');
 INSERT INTO `stock` VALUES ('000006', 'sz', '深振业Ａ', '1400055415');
-INSERT INTO `stock` VALUES ('000007', 'sz', '', '1400055447');
-INSERT INTO `stock` VALUES ('000008', 'sz', '', '1416539780');
-INSERT INTO `stock` VALUES ('000009', 'sz', '', '1400055429');
-INSERT INTO `stock` VALUES ('000010', 'sz', '', '1400055408');
-INSERT INTO `stock` VALUES ('000011', 'sz', '', '1400055419');
-INSERT INTO `stock` VALUES ('000012', 'sz', '南  玻Ａ', '1400055419');
-INSERT INTO `stock` VALUES ('000014', 'sz', '', '1400055389');
-INSERT INTO `stock` VALUES ('000016', 'sz', '', '1400055385');
-INSERT INTO `stock` VALUES ('000017', 'sz', '', '1400055373');
-INSERT INTO `stock` VALUES ('000018', 'sz', '', '1400055434');
-INSERT INTO `stock` VALUES ('000019', 'sz', '', '1400055468');
-INSERT INTO `stock` VALUES ('000020', 'sz', '深华发Ａ', '1400055478');
-INSERT INTO `stock` VALUES ('000021', 'sz', '', '1400055455');
-INSERT INTO `stock` VALUES ('000022', 'sz', '', '1400055400');
-INSERT INTO `stock` VALUES ('000023', 'sz', '', '1400055381');
-INSERT INTO `stock` VALUES ('000024', 'sz', '', '1400055373');
-INSERT INTO `stock` VALUES ('000025', 'sz', '', '1400055480');
-INSERT INTO `stock` VALUES ('000026', 'sz', '飞亚达Ａ', '1400055451');
-INSERT INTO `stock` VALUES ('000027', 'sz', '', '1400055451');
-INSERT INTO `stock` VALUES ('000028', 'sz', '国药一致', '1400055396');
-INSERT INTO `stock` VALUES ('000029', 'sz', '', '1400055404');
-INSERT INTO `stock` VALUES ('000030', 'sz', '富奥股份', '1400055425');
-INSERT INTO `stock` VALUES ('000031', 'sz', '中粮地产', '1400055393');
-INSERT INTO `stock` VALUES ('000032', 'sz', '', '1400055424');
-INSERT INTO `stock` VALUES ('000033', 'sz', '', '1400055377');
-INSERT INTO `stock` VALUES ('000034', 'sz', '', '1400055414');
-INSERT INTO `stock` VALUES ('000035', 'sz', '', '1400055379');
-INSERT INTO `stock` VALUES ('000036', 'sz', '', '1400055365');
-INSERT INTO `stock` VALUES ('000037', 'sz', '', '1416539780');
-INSERT INTO `stock` VALUES ('000038', 'sz', '', '1400055423');
-INSERT INTO `stock` VALUES ('000039', 'sz', '', '1400055423');
-INSERT INTO `stock` VALUES ('000040', 'sz', '', '1400055417');
-INSERT INTO `stock` VALUES ('000042', 'sz', '中洲控股', '1400055394');
-INSERT INTO `stock` VALUES ('000043', 'sz', '', '1400055377');
-INSERT INTO `stock` VALUES ('000045', 'sz', '', '1416539776');
-INSERT INTO `stock` VALUES ('000046', 'sz', '', '1400055429');
-INSERT INTO `stock` VALUES ('000048', 'sz', '康达尔', '1400055467');
-INSERT INTO `stock` VALUES ('000049', 'sz', '德赛电池', '1400055438');
-INSERT INTO `stock` VALUES ('000050', 'sz', '', '1400055481');
-INSERT INTO `stock` VALUES ('000055', 'sz', '', '1400055411');
-INSERT INTO `stock` VALUES ('000056', 'sz', '', '1400055460');
-INSERT INTO `stock` VALUES ('000058', 'sz', '深 赛 格', '1400055441');
-INSERT INTO `stock` VALUES ('000059', 'sz', '', '1400055477');
-INSERT INTO `stock` VALUES ('000060', 'sz', '', '1400055458');
-INSERT INTO `stock` VALUES ('000061', 'sz', '', '1400055467');
-INSERT INTO `stock` VALUES ('000062', 'sz', '', '1416539770');
-INSERT INTO `stock` VALUES ('000063', 'sz', '', '1400055452');
-INSERT INTO `stock` VALUES ('000065', 'sz', '北方国际', '1400055401');
-INSERT INTO `stock` VALUES ('000066', 'sz', '', '1400055464');
-INSERT INTO `stock` VALUES ('000068', 'sz', '', '1400055457');
-INSERT INTO `stock` VALUES ('000069', 'sz', '华侨城Ａ', '1400055388');
-INSERT INTO `stock` VALUES ('000070', 'sz', '', '1400055429');
-INSERT INTO `stock` VALUES ('000078', 'sz', '', '1400055445');
-INSERT INTO `stock` VALUES ('000088', 'sz', '', '1400055482');
-INSERT INTO `stock` VALUES ('000089', 'sz', '', '1400055445');
-INSERT INTO `stock` VALUES ('000090', 'sz', '', '1400055432');
-INSERT INTO `stock` VALUES ('000096', 'sz', '', '1400055487');
-INSERT INTO `stock` VALUES ('000099', 'sz', '', '1400055461');
-INSERT INTO `stock` VALUES ('000100', 'sz', '', '1400055399');
-INSERT INTO `stock` VALUES ('000151', 'sz', '中成股份', '1400055411');
-INSERT INTO `stock` VALUES ('000153', 'sz', '', '1400055441');
+INSERT INTO `stock` VALUES ('000007', 'sz', '', '1416560434');
+INSERT INTO `stock` VALUES ('000008', 'sz', '', '1416560454');
+INSERT INTO `stock` VALUES ('000009', 'sz', '', '1416560445');
+INSERT INTO `stock` VALUES ('000010', 'sz', '', '1416560447');
+INSERT INTO `stock` VALUES ('000011', 'sz', '', '1416560411');
+INSERT INTO `stock` VALUES ('000012', 'sz', '', '1416560422');
+INSERT INTO `stock` VALUES ('000014', 'sz', '', '1416560432');
+INSERT INTO `stock` VALUES ('000016', 'sz', '', '1416560422');
+INSERT INTO `stock` VALUES ('000017', 'sz', '', '1416560427');
+INSERT INTO `stock` VALUES ('000018', 'sz', '', '1416560457');
+INSERT INTO `stock` VALUES ('000019', 'sz', '', '1416560397');
+INSERT INTO `stock` VALUES ('000021', 'sz', '', '1416560457');
+INSERT INTO `stock` VALUES ('000022', 'sz', '', '1416560427');
+INSERT INTO `stock` VALUES ('000024', 'sz', '', '1416560404');
+INSERT INTO `stock` VALUES ('000025', 'sz', '', '1416560407');
+INSERT INTO `stock` VALUES ('000026', 'sz', '', '1416560409');
+INSERT INTO `stock` VALUES ('000027', 'sz', '', '1416560404');
+INSERT INTO `stock` VALUES ('000028', 'sz', '', '1416560457');
+INSERT INTO `stock` VALUES ('000029', 'sz', '', '1416560404');
+INSERT INTO `stock` VALUES ('000030', 'sz', '', '1416560429');
+INSERT INTO `stock` VALUES ('000031', 'sz', '', '1416560422');
+INSERT INTO `stock` VALUES ('000032', 'sz', '', '1416560395');
+INSERT INTO `stock` VALUES ('000034', 'sz', '', '1416560429');
+INSERT INTO `stock` VALUES ('000035', 'sz', '', '1416560402');
+INSERT INTO `stock` VALUES ('000036', 'sz', '', '1416560404');
+INSERT INTO `stock` VALUES ('000037', 'sz', '', '1416560438');
+INSERT INTO `stock` VALUES ('000038', 'sz', '', '1416560404');
+INSERT INTO `stock` VALUES ('000039', 'sz', '', '1416560416');
+INSERT INTO `stock` VALUES ('000040', 'sz', '', '1416560415');
+INSERT INTO `stock` VALUES ('000042', 'sz', '', '1416560454');
+INSERT INTO `stock` VALUES ('000043', 'sz', '', '1416560452');
+INSERT INTO `stock` VALUES ('000045', 'sz', '', '1416560427');
+INSERT INTO `stock` VALUES ('000046', 'sz', '', '1416560404');
+INSERT INTO `stock` VALUES ('000048', 'sz', '', '1416560450');
+INSERT INTO `stock` VALUES ('000049', 'sz', '', '1416560459');
+INSERT INTO `stock` VALUES ('000050', 'sz', '', '1416560418');
+INSERT INTO `stock` VALUES ('000055', 'sz', '', '1416560427');
+INSERT INTO `stock` VALUES ('000056', 'sz', '', '1416560407');
+INSERT INTO `stock` VALUES ('000058', 'sz', '', '1416560416');
+INSERT INTO `stock` VALUES ('000059', 'sz', '', '1416560407');
+INSERT INTO `stock` VALUES ('000060', 'sz', '', '1416560436');
+INSERT INTO `stock` VALUES ('000061', 'sz', '', '1416560431');
+INSERT INTO `stock` VALUES ('000062', 'sz', '', '1416560425');
+INSERT INTO `stock` VALUES ('000063', 'sz', '', '1416560443');
+INSERT INTO `stock` VALUES ('000065', 'sz', '', '1416560443');
+INSERT INTO `stock` VALUES ('000066', 'sz', '', '1416560450');
+INSERT INTO `stock` VALUES ('000068', 'sz', '', '1416560441');
+INSERT INTO `stock` VALUES ('000069', 'sz', '', '1416560407');
+INSERT INTO `stock` VALUES ('000078', 'sz', '', '1416560436');
+INSERT INTO `stock` VALUES ('000088', 'sz', '', '1416560404');
+INSERT INTO `stock` VALUES ('000089', 'sz', '', '1416560399');
+INSERT INTO `stock` VALUES ('000090', 'sz', '', '1416560397');
+INSERT INTO `stock` VALUES ('000096', 'sz', '', '1416560432');
+INSERT INTO `stock` VALUES ('000099', 'sz', '', '1416560438');
+INSERT INTO `stock` VALUES ('000100', 'sz', '', '1416560438');
+INSERT INTO `stock` VALUES ('000151', 'sz', '', '1416560441');
+INSERT INTO `stock` VALUES ('000153', 'sz', '', '1416560456');
 INSERT INTO `stock` VALUES ('000155', 'sz', '', '1400055486');
 INSERT INTO `stock` VALUES ('000156', 'sz', '华数传媒', '1400055474');
 INSERT INTO `stock` VALUES ('000157', 'sz', '中联重科', '1400055430');
@@ -131,12 +172,12 @@ INSERT INTO `stock` VALUES ('000338', 'sz', '', '1400055439');
 INSERT INTO `stock` VALUES ('000400', 'sz', '许继电气', '1400055379');
 INSERT INTO `stock` VALUES ('000401', 'sz', '冀东水泥', '1400055396');
 INSERT INTO `stock` VALUES ('000402', 'sz', '', '1400055380');
-INSERT INTO `stock` VALUES ('000403', 'sz', '', '1400055459');
+INSERT INTO `stock` VALUES ('000403', 'sz', 'ST生化', '1400055459');
 INSERT INTO `stock` VALUES ('000404', 'sz', '', '1400055464');
 INSERT INTO `stock` VALUES ('000407', 'sz', '胜利股份', '1400055453');
 INSERT INTO `stock` VALUES ('000408', 'sz', '', '1400055435');
 INSERT INTO `stock` VALUES ('000409', 'sz', '', '1400055470');
-INSERT INTO `stock` VALUES ('000410', 'sz', '', '1400055480');
+INSERT INTO `stock` VALUES ('000410', 'sz', '沈阳机床', '1400055480');
 INSERT INTO `stock` VALUES ('000411', 'sz', '', '1400055394');
 INSERT INTO `stock` VALUES ('000413', 'sz', '', '1400055377');
 INSERT INTO `stock` VALUES ('000415', 'sz', '', '1400055411');
@@ -148,11 +189,11 @@ INSERT INTO `stock` VALUES ('000420', 'sz', '', '1400055479');
 INSERT INTO `stock` VALUES ('000421', 'sz', '', '1400055370');
 INSERT INTO `stock` VALUES ('000422', 'sz', '', '1400055477');
 INSERT INTO `stock` VALUES ('000423', 'sz', '', '1400055395');
-INSERT INTO `stock` VALUES ('000425', 'sz', '', '1400055419');
-INSERT INTO `stock` VALUES ('000426', 'sz', '', '1400055369');
+INSERT INTO `stock` VALUES ('000425', 'sz', '徐工机械', '1400055419');
+INSERT INTO `stock` VALUES ('000426', 'sz', '兴业矿业', '1400055369');
 INSERT INTO `stock` VALUES ('000428', 'sz', '', '1416539782');
 INSERT INTO `stock` VALUES ('000429', 'sz', '', '1400055435');
-INSERT INTO `stock` VALUES ('000430', 'sz', '', '1400055403');
+INSERT INTO `stock` VALUES ('000430', 'sz', '张家界', '1400055403');
 INSERT INTO `stock` VALUES ('000488', 'sz', '', '1400055442');
 INSERT INTO `stock` VALUES ('000498', 'sz', '', '1400055416');
 INSERT INTO `stock` VALUES ('000501', 'sz', '', '1400055473');
@@ -169,9 +210,9 @@ INSERT INTO `stock` VALUES ('000514', 'sz', '', '1400055484');
 INSERT INTO `stock` VALUES ('000516', 'sz', '', '1400055452');
 INSERT INTO `stock` VALUES ('000517', 'sz', '', '1400055450');
 INSERT INTO `stock` VALUES ('000518', 'sz', '', '1400055448');
-INSERT INTO `stock` VALUES ('000519', 'sz', '', '1400055428');
-INSERT INTO `stock` VALUES ('000521', 'sz', '', '1400055476');
-INSERT INTO `stock` VALUES ('000523', 'sz', '', '1400055406');
+INSERT INTO `stock` VALUES ('000519', 'sz', '江南红箭', '1400055428');
+INSERT INTO `stock` VALUES ('000521', 'sz', '美菱电器', '1400055476');
+INSERT INTO `stock` VALUES ('000523', 'sz', '广州浪奇', '1400055406');
 INSERT INTO `stock` VALUES ('000524', 'sz', '', '1400055365');
 INSERT INTO `stock` VALUES ('000525', 'sz', '', '1400055407');
 INSERT INTO `stock` VALUES ('000526', 'sz', '', '1400055399');
@@ -190,7 +231,7 @@ INSERT INTO `stock` VALUES ('000540', 'sz', '', '1400055400');
 INSERT INTO `stock` VALUES ('000541', 'sz', '', '1400055448');
 INSERT INTO `stock` VALUES ('000543', 'sz', '', '1400055410');
 INSERT INTO `stock` VALUES ('000544', 'sz', '', '1400055433');
-INSERT INTO `stock` VALUES ('000545', 'sz', '', '1400055488');
+INSERT INTO `stock` VALUES ('000545', 'sz', '金浦钛业', '1400055488');
 INSERT INTO `stock` VALUES ('000546', 'sz', '', '1400055409');
 INSERT INTO `stock` VALUES ('000547', 'sz', '', '1416539768');
 INSERT INTO `stock` VALUES ('000548', 'sz', '', '1400055407');
@@ -198,37 +239,37 @@ INSERT INTO `stock` VALUES ('000550', 'sz', '', '1400055465');
 INSERT INTO `stock` VALUES ('000551', 'sz', '', '1400055431');
 INSERT INTO `stock` VALUES ('000552', 'sz', '', '1400055478');
 INSERT INTO `stock` VALUES ('000553', 'sz', '', '1400055438');
-INSERT INTO `stock` VALUES ('000554', 'sz', '', '1400055459');
+INSERT INTO `stock` VALUES ('000554', 'sz', '泰山石油', '1400055459');
 INSERT INTO `stock` VALUES ('000555', 'sz', '', '1416539767');
 INSERT INTO `stock` VALUES ('000558', 'sz', '', '1400055486');
 INSERT INTO `stock` VALUES ('000559', 'sz', '', '1400055450');
 INSERT INTO `stock` VALUES ('000560', 'sz', '', '1416539782');
 INSERT INTO `stock` VALUES ('000561', 'sz', '', '1400055443');
 INSERT INTO `stock` VALUES ('000562', 'sz', '', '1416539773');
-INSERT INTO `stock` VALUES ('000563', 'sz', '', '1400055456');
+INSERT INTO `stock` VALUES ('000563', 'sz', '陕国投Ａ', '1400055456');
 INSERT INTO `stock` VALUES ('000564', 'sz', '', '1416539780');
 INSERT INTO `stock` VALUES ('000565', 'sz', '', '1400055477');
 INSERT INTO `stock` VALUES ('000566', 'sz', '', '1400055447');
 INSERT INTO `stock` VALUES ('000567', 'sz', '', '1400055378');
 INSERT INTO `stock` VALUES ('000568', 'sz', '', '1400055466');
-INSERT INTO `stock` VALUES ('000570', 'sz', '', '1400055383');
+INSERT INTO `stock` VALUES ('000570', 'sz', '苏常柴Ａ', '1400055383');
 INSERT INTO `stock` VALUES ('000571', 'sz', '', '1400055445');
 INSERT INTO `stock` VALUES ('000572', 'sz', '', '1400055432');
 INSERT INTO `stock` VALUES ('000573', 'sz', '', '1400055403');
 INSERT INTO `stock` VALUES ('000576', 'sz', '', '1400055455');
 INSERT INTO `stock` VALUES ('000581', 'sz', '', '1400055479');
 INSERT INTO `stock` VALUES ('000582', 'sz', '', '1400055369');
-INSERT INTO `stock` VALUES ('000584', 'sz', '', '1400055452');
+INSERT INTO `stock` VALUES ('000584', 'sz', '友利控股', '1400055452');
 INSERT INTO `stock` VALUES ('000585', 'sz', '', '1400055398');
-INSERT INTO `stock` VALUES ('000586', 'sz', '', '1400055370');
+INSERT INTO `stock` VALUES ('000586', 'sz', '汇源通信', '1400055370');
 INSERT INTO `stock` VALUES ('000587', 'sz', '', '1400055459');
-INSERT INTO `stock` VALUES ('000589', 'sz', '', '1400055414');
+INSERT INTO `stock` VALUES ('000589', 'sz', '黔轮胎Ａ', '1400055414');
 INSERT INTO `stock` VALUES ('000590', 'sz', '', '1400055487');
 INSERT INTO `stock` VALUES ('000591', 'sz', '', '1400055391');
 INSERT INTO `stock` VALUES ('000592', 'sz', '', '1400055373');
 INSERT INTO `stock` VALUES ('000593', 'sz', '', '1400055450');
 INSERT INTO `stock` VALUES ('000595', 'sz', '', '1400055436');
-INSERT INTO `stock` VALUES ('000596', 'sz', '', '1400055474');
+INSERT INTO `stock` VALUES ('000596', 'sz', '古井贡酒', '1400055474');
 INSERT INTO `stock` VALUES ('000597', 'sz', '', '1400055473');
 INSERT INTO `stock` VALUES ('000598', 'sz', '', '1400055429');
 INSERT INTO `stock` VALUES ('000599', 'sz', '', '1400055459');
@@ -244,13 +285,13 @@ INSERT INTO `stock` VALUES ('000610', 'sz', '', '1400055454');
 INSERT INTO `stock` VALUES ('000611', 'sz', '', '1400055373');
 INSERT INTO `stock` VALUES ('000612', 'sz', '', '1416539775');
 INSERT INTO `stock` VALUES ('000613', 'sz', '', '1400055488');
-INSERT INTO `stock` VALUES ('000616', 'sz', '', '1400055417');
+INSERT INTO `stock` VALUES ('000616', 'sz', '亿城投资', '1400055417');
 INSERT INTO `stock` VALUES ('000617', 'sz', '', '1400055425');
 INSERT INTO `stock` VALUES ('000619', 'sz', '', '1400055398');
-INSERT INTO `stock` VALUES ('000620', 'sz', '', '1400055435');
-INSERT INTO `stock` VALUES ('000622', 'sz', '', '1400055453');
+INSERT INTO `stock` VALUES ('000620', 'sz', '新华联', '1400055435');
+INSERT INTO `stock` VALUES ('000622', 'sz', '恒立实业', '1400055453');
 INSERT INTO `stock` VALUES ('000623', 'sz', '', '1400055435');
-INSERT INTO `stock` VALUES ('000625', 'sz', '', '1400055423');
+INSERT INTO `stock` VALUES ('000625', 'sz', '长安汽车', '1400055423');
 INSERT INTO `stock` VALUES ('000626', 'sz', '', '1400055364');
 INSERT INTO `stock` VALUES ('000627', 'sz', '', '1400055465');
 INSERT INTO `stock` VALUES ('000628', 'sz', '', '1400055388');
@@ -267,7 +308,7 @@ INSERT INTO `stock` VALUES ('000639', 'sz', '', '1400055433');
 INSERT INTO `stock` VALUES ('000650', 'sz', '', '1400055419');
 INSERT INTO `stock` VALUES ('000651', 'sz', '', '1400055426');
 INSERT INTO `stock` VALUES ('000652', 'sz', '', '1400055396');
-INSERT INTO `stock` VALUES ('000655', 'sz', '', '1400055377');
+INSERT INTO `stock` VALUES ('000655', 'sz', '金岭矿业', '1400055377');
 INSERT INTO `stock` VALUES ('000656', 'sz', '', '1400055380');
 INSERT INTO `stock` VALUES ('000657', 'sz', '', '1400055442');
 INSERT INTO `stock` VALUES ('000659', 'sz', '', '1400055387');
@@ -2599,17 +2640,18 @@ INSERT INTO `stock` VALUES ('603993', 'sh', '', '1400055489');
 -- ----------------------------
 DROP TABLE IF EXISTS `vol_double`;
 CREATE TABLE `vol_double` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `day_time` int(11) NOT NULL,
   `stock_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `todayVol` int(11) NOT NULL,
   `last_day_Vol` int(11) NOT NULL,
-  `day_time` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='当天成交量大于前一交易日一倍以上';
+  PRIMARY KEY (`day_time`,`stock_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='当天成交量大于前一交易日一倍以上';
 
 -- ----------------------------
 -- Records of vol_double
 -- ----------------------------
+INSERT INTO `vol_double` VALUES ('1416557546', '000005', '5555555', '311707');
+INSERT INTO `vol_double` VALUES ('1416557546', '000018', '55557139', '15554');
 
 -- ----------------------------
 -- Procedure structure for `stock_day_stock_vol`
