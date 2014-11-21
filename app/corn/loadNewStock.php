@@ -9,28 +9,28 @@ $objBase = m('m_base');
 //添加每天新的股票
 $page = 100;
 $url  = 'http://stock.gtimg.cn/data/index.php?appn=rank&t=ranka/chr&o=0&l=80&v=list_data&p=';
-for ($i = 1; $i <= $page; $i++) {
-    $endUrl = $url . $i;
-    $data   = file_get_contents($endUrl);
-
-    if (1 == $i) {
-        $page = getStr($data, 'total:', ',');
-    }
-    $idStr = getStr($data, "data:'", "'");
-
-    $tmp = explode(',', $idStr);
-    if ($tmp) {
-        foreach ($tmp as $val) {
-            $type     = substr($val, 0, 2);
-            $stock_id = substr($val, 2, 8);
-            $arr      = $objBase->db->get_one("select stock_id from `stock` where stock_id = '{$stock_id}'");
-            if (empty($arr)) {
-                $objBase->db->insert('stock', array('stock_id' => $stock_id, 'type' => $type, 'create_time' => time()));
-            }
-        }
-    }
-    sleep(2);
-}
+//for ($i = 1; $i <= $page; $i++) {
+//    $endUrl = $url . $i;
+//    $data   = file_get_contents($endUrl);
+//
+//    if (1 == $i) {
+//        $page = getStr($data, 'total:', ',');
+//    }
+//    $idStr = getStr($data, "data:'", "'");
+//
+//    $tmp = explode(',', $idStr);
+//    if ($tmp) {
+//        foreach ($tmp as $val) {
+//            $type     = substr($val, 0, 2);
+//            $stock_id = substr($val, 2, 8);
+//            $arr      = $objBase->db->get_one("select stock_id from `stock` where stock_id = '{$stock_id}'");
+//            if (empty($arr)) {
+//                $objBase->db->insert('stock', array('stock_id' => $stock_id, 'type' => $type, 'create_time' => time()));
+//            }
+//        }
+//    }
+//    sleep(2);
+//}
 
 
 getDayInfoFromHeXun();
@@ -73,6 +73,11 @@ function getDayInfoFromHeXun()
         $harvest = str_replace(array('",type', '"'), '', $tmp['9']);
         $vol     = str_replace(array('",tu', '"'), '', $tmp['5']);
         if ($open < 1) {
+            continue;
+        }
+        $tempTIme = explode(' ', str_replace(array('"', '"'), '', $tmp['11']));
+        if (strtotime($tempTIme[0]) != strtotime('today'))
+        {
             continue;
         }
         $dayArr = array(
