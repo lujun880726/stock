@@ -1,4 +1,5 @@
 <?php
+
 set_time_limit(0);
 
 include '../../web/init.php';
@@ -28,54 +29,110 @@ for ($i = 1; $i <= $page; $i++) {
             }
         }
     }
-    sleep(5);
+    sleep(2);
 }
 
-// 每天的收盘信息 停盘不记录
-$list = $objBase->db->get_all("select * from `stock` where 1");
-foreach ($list as $val) {
-    $url = "http://qt.gtimg.cn/r=" . (0.28181632646317246 + '0.' . rand(1, 999999999)) . "q=marketStat,stdunixtime," . $val['type'] . $val['stock_id']. ",";
-    $data = '';
-    $data = file_get_contents($url);
-    if(empty($data)){
-        sleep(5);
-        $data = file_get_contents($url);
-    }
-    if (empty($data)){
-        file_put_contents(date('Y-m-d') . '.log', $url."\r\n", FILE_APPEND);
-        continue;
-    }
 
-    $tmp  = explode('~', $data);
-    if (!$val['name']) {
-        $objBase->db->update('stock', array('name' => iconv("GB2312","utf-8",$tmp[1])), "stock_id = '" . $val['stock_id'] . "'");//
-    }
-    if ($tmp[6] < 1) {
-        continue;
-    }
-    $dayArr = array(
-        'stock_id'  => $val['stock_id'],
-        'type'      => $val['type'],
-        'day_time'  => date('Ymd'),
-        'week_time' => date('YW'),
-        'mon_time'  => date('Ym'),
-        'year_time' => date('Y'),
-        'open'      => $tmp[5],
-        'top'       => $tmp[33],
-        'footer'    => $tmp[34],
-        'harvest'   => $tmp[3],
-        'vol'       => $tmp[6],
-    );
-
-    $objBase->db->insert('day_harvest_info', $dayArr);
-     sleep(5);
-}
+getDayInfoFromHeXun();
 
 //存储过程计算与上一个交易的比值
-$objBase->db->get_all("call stock_day_stock_vol(" . date('Ym') .");");
+$objBase->db->get_all("call stock_day_stock_vol(" . date('Ymd') . ");");
 
 // 星期五做周信息
-
-
-
 // 月底做的信息
+
+
+
+function getDayInfoFromHeXun()
+{
+    global $objBase;
+    // 每天的收盘信息 停盘不记录
+    $list = $objBase->db->get_all("select * from `stock` where 1");
+    foreach ($list as $val) {
+        $url  = "http://bdcjhq.hexun.com/quote?s2=" . $val['stock_id'] . "." . $val['type'];
+        $data = '';
+        $data = file_get_contents($url);
+        if (empty($data)) {
+            sleep(5);
+            $data = file_get_contents($url);
+        }
+        if (empty($data)) {
+            file_put_contents(date('Y-m-d') . '.log', $url . "\r\n", FILE_APPEND);
+            continue;
+        }
+        $strInfo = getStr($data, 'bdcallback(', ')}');
+        $tmp     = explode(":", $strInfo);
+        $name = str_replace(array('",pc', '"'), '', $tmp['2']);
+        if (!$val['name']) {
+
+            $objBase->db->update('stock', array('name' => iconv("GB2312", "utf-8", $name)), "stock_id = '" . $val['stock_id'] . "'"); //
+        }
+        $open    = str_replace(array('",vo', '"'), '', $tmp['4']);
+        $top     = str_replace(array('",lo', '"'), '', $tmp['7']);
+        $footer  = str_replace(array('",la', '"'), '', $tmp['8']);
+        $harvest = str_replace(array('",type', '"'), '', $tmp['9']);
+        $vol     = str_replace(array('",tu', '"'), '', $tmp['5']);
+        if ($open < 1) {
+            continue;
+        }
+        $dayArr = array(
+            'stock_id'  => $val['stock_id'],
+            'type'      => $val['type'],
+            'day_time'  => date('Ymd'),
+            'week_time' => date('YW'),
+            'mon_time'  => date('Ym'),
+            'year_time' => date('Y'),
+            'open'      => $open,
+            'top'       => $top,
+            'footer'    => $footer,
+            'harvest'   => $harvest,
+            'vol'       => $vol,
+        );
+        $objBase->db->insert('day_harvest_info', $dayArr);
+        sleep(2);
+    }
+}
+
+function getDayInfoFromQQ()
+{
+    global $objBase;
+    // 每天的收盘信息 停盘不记录
+    $list = $objBase->db->get_all("select * from `stock` where 1");
+    foreach ($list as $val) {
+        $url  = "http://qt.gtimg.cn/r=" . (0.28181632646317246 + '0.' . rand(1, 999999999)) . "q=marketStat,stdunixtime," . $val['type'] . $val['stock_id'] . ",";
+        $data = '';
+        $data = file_get_contents($url);
+        if (empty($data)) {
+            sleep(5);
+            $data = file_get_contents($url);
+        }
+        if (empty($data)) {
+            file_put_contents(date('Y-m-d') . '.log', $url . "\r\n", FILE_APPEND);
+            continue;
+        }
+
+        $tmp = explode('~', $data);
+        if (!$val['name']) {
+            $objBase->db->update('stock', array('name' => iconv("GB2312", "utf-8", $tmp[1])), "stock_id = '" . $val['stock_id'] . "'"); //
+        }
+        if ($tmp[6] < 1) {
+            continue;
+        }
+        $dayArr = array(
+            'stock_id'  => $val['stock_id'],
+            'type'      => $val['type'],
+            'day_time'  => date('Ymd'),
+            'week_time' => date('YW'),
+            'mon_time'  => date('Ym'),
+            'year_time' => date('Y'),
+            'open'      => $tmp[5],
+            'top'       => $tmp[33],
+            'footer'    => $tmp[34],
+            'harvest'   => $tmp[3],
+            'vol'       => $tmp[6],
+        );
+
+        $objBase->db->insert('day_harvest_info', $dayArr);
+        sleep(5);
+    }
+}
