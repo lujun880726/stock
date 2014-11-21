@@ -28,12 +28,14 @@ for ($i = 1; $i <= $page; $i++) {
             }
         }
     }
+    sleep(5);
 }
 
 // 每天的收盘信息 停盘不记录
 $list = $objBase->db->get_all("select * from `stock` where 1");
 foreach ($list as $val) {
     $url = "http://qt.gtimg.cn/r=" . (0.28181632646317246 + '0.' . rand(1, 999999999)) . "q=marketStat,stdunixtime," . $val['type'] . $val['stock_id']. ",";
+    var_dump($url);exit;
     $data = '';
     $data = file_get_contents($url);
     if(empty($data)){
@@ -41,7 +43,7 @@ foreach ($list as $val) {
         $data = file_get_contents($url);
     }
     if (empty($data)){
-        file_put_contents(date('Y-m-d') . '.log', $val['stock_id']."\r\n", FILE_APPEND);
+        file_put_contents(date('Y-m-d') . '.log', $url."\r\n", FILE_APPEND);
         continue;
     }
 
@@ -64,7 +66,11 @@ foreach ($list as $val) {
     );
 
     $objBase->db->insert('day_harvest_info', $dayArr);
+    sleep(3);
 }
+
+//存储过程计算与上一个交易的比值
+$objBase->db->get_all("call stock_day_stock_vol(" . date('Ym') .");");
 
 // 星期五做周信息
 
