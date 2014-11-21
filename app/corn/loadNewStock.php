@@ -50,6 +50,9 @@ foreach ($list as $val) {
     if (!$val['name']) {
         $objBase->db->update('stock', array('name' => iconv("GB2312","utf-8",$tmp[1])), "stock_id = '" . $val['stock_id'] . "'");//
     }
+    if ($tmp[6] < 1) {
+        continue;
+    }
     $dayArr = array(
         'stock_id'  => $val['stock_id'],
         'type'      => $val['type'],
@@ -65,7 +68,7 @@ foreach ($list as $val) {
     );
 
     $objBase->db->insert('day_harvest_info', $dayArr);
-    sleep(3);
+     sleep(5);
 }
 
 //存储过程计算与上一个交易的比值
