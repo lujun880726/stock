@@ -35,7 +35,6 @@ for ($i = 1; $i <= $page; $i++) {
 $list = $objBase->db->get_all("select * from `stock` where 1");
 foreach ($list as $val) {
     $url = "http://qt.gtimg.cn/r=" . (0.28181632646317246 + '0.' . rand(1, 999999999)) . "q=marketStat,stdunixtime," . $val['type'] . $val['stock_id']. ",";
-    var_dump($url);exit;
     $data = '';
     $data = file_get_contents($url);
     if(empty($data)){
