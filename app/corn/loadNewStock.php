@@ -2,7 +2,7 @@
 
 set_time_limit(0);
 
-file_put_contents(date('Y-m-d') . '.log', '----begin---' . "\r\n", FILE_APPEND);
+file_put_contents(date('Y-m-d') . '.log', '----'.date('Y-m-d').'begin---' . "\r\n", FILE_APPEND);
 
 
 include '../../web/init.php';
@@ -50,7 +50,7 @@ $objBase->db->get_all("call stock_day_stock_vol(" . date('Ymd') . ");");
 // 星期五做周信息
 // 月底做的信息
 
-
+file_put_contents(date('Y-m-d') . '.log', '----'.date('Y-m-d').'end---' . "\r\n", FILE_APPEND);
 
 function getDayInfoFromHeXun()
 {
