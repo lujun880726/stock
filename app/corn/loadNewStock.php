@@ -8,7 +8,7 @@ file_put_contents(date('Y-m-d') . '.log', '----'.date('Y-m-d').'begin---' . "\r\
 include '../../web/init.php';
 
 $objBase = m('m_base');
- file_put_contents(date('Y-m-d') . '.log', '----new stock begin---' .time().  "\r\n", FILE_APPEND);
+ file_put_contents(date('Y-m-d') . '.log', 'new stock begin---' .time().  "\r\n", FILE_APPEND);
 //添加每天新的股票
 $page = 100;
 $url  = 'http://stock.gtimg.cn/data/index.php?appn=rank&t=ranka/chr&o=0&l=80&v=list_data&p=';
@@ -34,18 +34,18 @@ for ($i = 1; $i <= $page; $i++) {
     }
     sleep(2);
 }
- file_put_contents(date('Y-m-d') . '.log', '----new stock end---' .time(). "\r\n", FILE_APPEND);
+ file_put_contents(date('Y-m-d') . '.log', 'new stock end---' .time(). "\r\n", FILE_APPEND);
 
 
- file_put_contents(date('Y-m-d') . '.log', '----getDayInfoFromHeXun -begin---'.time().  "\r\n", FILE_APPEND);
+ file_put_contents(date('Y-m-d') . '.log', 'getDayInfoFromHeXun -begin---'.time().  "\r\n", FILE_APPEND);
 getDayInfoFromHeXun();
- file_put_contents(date('Y-m-d') . '.log', '----getDayInfoFromHeXun -end---'.time().  "\r\n", FILE_APPEND);
+ file_put_contents(date('Y-m-d') . '.log', 'getDayInfoFromHeXun -end---'.time().  "\r\n", FILE_APPEND);
 
 
-  file_put_contents(date('Y-m-d') . '.log', '----call pro -begin---'.time().  "\r\n", FILE_APPEND);
+  file_put_contents(date('Y-m-d') . '.log', 'call pro -begin---'.time().  "\r\n", FILE_APPEND);
 //存储过程计算与上一个交易的比值
 $objBase->db->get_all("call stock_day_stock_vol(" . date('Ymd') . ");");
-  file_put_contents(date('Y-m-d') . '.log', '----call pro -end---'.time().  "\r\n", FILE_APPEND);
+  file_put_contents(date('Y-m-d') . '.log', 'call pro -end---'.time().  "\r\n", FILE_APPEND);
 
 // 星期五做周信息
 // 月底做的信息
