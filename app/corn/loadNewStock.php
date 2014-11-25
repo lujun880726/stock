@@ -2,41 +2,50 @@
 
 set_time_limit(0);
 
+file_put_contents(date('Y-m-d') . '.log', '----begin---' . "\r\n", FILE_APPEND);
+
+
 include '../../web/init.php';
 
 $objBase = m('m_base');
-
+ file_put_contents(date('Y-m-d') . '.log', '----new stock begin---' .time().  "\r\n", FILE_APPEND);
 //添加每天新的股票
 $page = 100;
 $url  = 'http://stock.gtimg.cn/data/index.php?appn=rank&t=ranka/chr&o=0&l=80&v=list_data&p=';
-//for ($i = 1; $i <= $page; $i++) {
-//    $endUrl = $url . $i;
-//    $data   = file_get_contents($endUrl);
-//
-//    if (1 == $i) {
-//        $page = getStr($data, 'total:', ',');
-//    }
-//    $idStr = getStr($data, "data:'", "'");
-//
-//    $tmp = explode(',', $idStr);
-//    if ($tmp) {
-//        foreach ($tmp as $val) {
-//            $type     = substr($val, 0, 2);
-//            $stock_id = substr($val, 2, 8);
-//            $arr      = $objBase->db->get_one("select stock_id from `stock` where stock_id = '{$stock_id}'");
-//            if (empty($arr)) {
-//                $objBase->db->insert('stock', array('stock_id' => $stock_id, 'type' => $type, 'create_time' => time()));
-//            }
-//        }
-//    }
-//    sleep(2);
-//}
+for ($i = 1; $i <= $page; $i++) {
+    $endUrl = $url . $i;
+    $data   = file_get_contents($endUrl);
+
+    if (1 == $i) {
+        $page = getStr($data, 'total:', ',');
+    }
+    $idStr = getStr($data, "data:'", "'");
+
+    $tmp = explode(',', $idStr);
+    if ($tmp) {
+        foreach ($tmp as $val) {
+            $type     = substr($val, 0, 2);
+            $stock_id = substr($val, 2, 8);
+            $arr      = $objBase->db->get_one("select stock_id from `stock` where stock_id = '{$stock_id}'");
+            if (empty($arr)) {
+                $objBase->db->insert('stock', array('stock_id' => $stock_id, 'type' => $type, 'create_time' => time()));
+            }
+        }
+    }
+    sleep(2);
+}
+ file_put_contents(date('Y-m-d') . '.log', '----new stock end---' .time(). "\r\n", FILE_APPEND);
 
 
+ file_put_contents(date('Y-m-d') . '.log', '----getDayInfoFromHeXun -begin---'.time().  "\r\n", FILE_APPEND);
 getDayInfoFromHeXun();
+ file_put_contents(date('Y-m-d') . '.log', '----getDayInfoFromHeXun -end---'.time().  "\r\n", FILE_APPEND);
 
+
+  file_put_contents(date('Y-m-d') . '.log', '----call pro -begin---'.time().  "\r\n", FILE_APPEND);
 //存储过程计算与上一个交易的比值
 $objBase->db->get_all("call stock_day_stock_vol(" . date('Ymd') . ");");
+  file_put_contents(date('Y-m-d') . '.log', '----call pro -end---'.time().  "\r\n", FILE_APPEND);
 
 // 星期五做周信息
 // 月底做的信息
