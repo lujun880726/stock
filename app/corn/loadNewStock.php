@@ -1,6 +1,9 @@
 <?php
 
 set_time_limit(0);
+ini_set('display_errors', 'On');
+            error_reporting(E_ALL);
+
 
 file_put_contents(date('Y-m-d') . '.log', '----'.date('Y-m-d').'begin---' . "\r\n", FILE_APPEND);
 
@@ -13,9 +16,10 @@ $objBase = m('m_base');
 $page = 100;
 $url  = 'http://stock.gtimg.cn/data/index.php?appn=rank&t=ranka/chr&o=0&l=80&v=list_data&p=';
 for ($i = 1; $i <= $page; $i++) {
+
     $endUrl = $url . $i;
     $data   = file_get_contents($endUrl);
-
+echo $endUrl;
     if (1 == $i) {
         $page = getStr($data, 'total:', ',');
     }
@@ -58,6 +62,7 @@ function getDayInfoFromHeXun()
     // 每天的收盘信息 停盘不记录
     $list = $objBase->db->get_all("select * from `stock` where 1");
     foreach ($list as $val) {
+        echo $val['stock_id'];
         $url  = "http://bdcjhq.hexun.com/quote?s2=" . $val['stock_id'] . "." . $val['type'];
         $data = '';
         $data = file_get_contents($url);
