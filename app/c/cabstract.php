@@ -12,7 +12,7 @@ abstract class c_cabstract
     public $_paraArr  = array();
     public $_bg       = false;
     public $_viewType = 1;  // 1整页。2 弹出框。3 AJAX
-    public $_isLogin  = false;
+    public $_isLogin  = true;
 
     public function init()
     {
@@ -48,7 +48,7 @@ abstract class c_cabstract
 
     public function jsonx($msg, $resultType, $extra = '')
     {
-        return array('msg' => $msg, 'res' => $resultType, 'extra' => $extra);
+        exit(json_encode(array('msg' => $msg, 'res' => $resultType, 'extra' => $extra)));
     }
 
 }

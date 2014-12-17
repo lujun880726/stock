@@ -86,3 +86,4 @@ function getStr($data, $f, $e)
     $pos = strpos($tmp[1], $e);
     return substr($tmp[1], 0, $pos);
 }
+

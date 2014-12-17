@@ -6,6 +6,16 @@
  * and open the template in the editor.
  */
 
+
+if ((isset($_REQUEST['dbg']) && 'debug' == $_REQUEST['dbg'])) {
+    ini_set('display_errors', 'On');
+    error_reporting(E_ALL);
+} else {
+    ini_set('display_errors', 'Off');
+    error_reporting(0);
+}
+
+
 if (substr($_SERVER['HTTP_HOST'], 0, strpos($_SERVER['HTTP_HOST'], '.')) == 'stockc') {
     include 'cron.php';
     exit;
@@ -49,6 +59,7 @@ if ('/' == $REQUEST_URI) {
 }
 
 include 'init.php';
+include 'fun.php';
 
 //$fFile = ROOT_C . $f . '.php';
 //if (!file_exists($fFile)) {

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2014-11-21 17:44:25
+Date: 2014-12-17 16:04:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -82,6 +82,23 @@ INSERT INTO `day_harvest_info` VALUES ('000048', 'sz', '20141121', '201447', '20
 INSERT INTO `day_harvest_info` VALUES ('000049', 'sz', '20141121', '201447', '201411', '2014', '35.580', '35.580', '35.000', '35.260', '43340');
 INSERT INTO `day_harvest_info` VALUES ('000050', 'sz', '20141121', '201447', '201411', '2014', '22.500', '22.770', '22.400', '22.670', '172487');
 INSERT INTO `day_harvest_info` VALUES ('000055', 'sz', '20141121', '201447', '201411', '2014', '10.570', '10.760', '10.520', '10.610', '45537');
+
+-- ----------------------------
+-- Table structure for `my_attention_stock`
+-- ----------------------------
+DROP TABLE IF EXISTS `my_attention_stock`;
+CREATE TABLE `my_attention_stock` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `stock_id` varchar(6) NOT NULL,
+  `attention_price` decimal(5,3) NOT NULL COMMENT '关注时价格',
+  `ctime` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='我关注的股票';
+
+-- ----------------------------
+-- Records of my_attention_stock
+-- ----------------------------
+INSERT INTO `my_attention_stock` VALUES ('9', '600317', '5.470', '1418802750');
 
 -- ----------------------------
 -- Table structure for `stock`
