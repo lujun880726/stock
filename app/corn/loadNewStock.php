@@ -38,18 +38,18 @@ echo $endUrl;
     }
     sleep(2);
 }
- file_put_contents(date('Y-m-d') . '.log', 'new stock end---' .time(). "\r\n", FILE_APPEND);
-
-
- file_put_contents(date('Y-m-d') . '.log', 'getDayInfoFromHeXun -begin---'.time().  "\r\n", FILE_APPEND);
-getDayInfoFromHeXun();
- file_put_contents(date('Y-m-d') . '.log', 'getDayInfoFromHeXun -end---'.time().  "\r\n", FILE_APPEND);
-
-
-  file_put_contents(date('Y-m-d') . '.log', 'call pro -begin---'.time().  "\r\n", FILE_APPEND);
-//存储过程计算与上一个交易的比值
-$objBase->db->get_all("call stock_day_stock_vol(" . date('Ymd') . ");");
-  file_put_contents(date('Y-m-d') . '.log', 'call pro -end---'.time().  "\r\n", FILE_APPEND);
+// file_put_contents(date('Y-m-d') . '.log', 'new stock end---' .time(). "\r\n", FILE_APPEND);
+//
+//
+// file_put_contents(date('Y-m-d') . '.log', 'getDayInfoFromHeXun -begin---'.time().  "\r\n", FILE_APPEND);
+//getDayInfoFromHeXun();
+// file_put_contents(date('Y-m-d') . '.log', 'getDayInfoFromHeXun -end---'.time().  "\r\n", FILE_APPEND);
+//
+//
+//  file_put_contents(date('Y-m-d') . '.log', 'call pro -begin---'.time().  "\r\n", FILE_APPEND);
+////存储过程计算与上一个交易的比值
+//$objBase->db->get_all("call stock_day_stock_vol(" . date('Ymd') . ");");
+//  file_put_contents(date('Y-m-d') . '.log', 'call pro -end---'.time().  "\r\n", FILE_APPEND);
 
 // 星期五做周信息
 // 月底做的信息
