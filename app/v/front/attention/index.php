@@ -4,15 +4,15 @@
         $.getJSON(
                 "/attention/getNow/" + stock_id + ".html",
                 function(data) {
-                    $('#nowprice').html(data.msg.harvest);
+                    $('#nowprice_'+stock_id).html(data.msg.harvest);
 
                     if (parseFloat(data.msg.harvest) ==  parseFloat($('#price_' + stock_id).html())) {
-                        $('#nowrate').html('0% ');
+                        $('#nowrate_'+stock_id).html('0% ');
                     } else if (parseFloat(data.msg.harvest) > parseFloat($('#price_' + stock_id).html())) {
-                        $('#nowrate').html('+' + parseFloat(data.msg.harvest) / parseFloat($('#price_' + stock_id).html()) + '% ');
+                        $('#nowrate_'+stock_id).html('+' + parseFloat(data.msg.harvest) / parseFloat($('#price_' + stock_id).html()) + '% ');
                     } else {
-                        $('#nowrate').html('-' + parseFloat(data.msg.harvest) / parseFloat($('#price_' + stock_id).html()) + '% ');
-                        $('#nowrate').attr('style', 'color: red');
+                        $('#nowrate_'+stock_id).html('-' + parseFloat(data.msg.harvest) / parseFloat($('#price_' + stock_id).html()) + '% ');
+                        $('#nowrate_'+stock_id).attr('style', 'color: red');
                     }
                 }
         );
@@ -59,8 +59,8 @@
                             <td> <?php echo $val['name'] ?> </td>
                             <td> <?php echo date('Y-m-d', $val['ctime']) ?> </td>
                             <td> <span id="price_<?php echo $val['stock_id'] ?>"><?php echo $val['attention_price'] ?></span></td>
-                            <td> <span id="nowprice"> 当前价</span> </td>
-                            <td> <span id="nowrate"> 百分比</span> </td>
+                            <td> <span id="nowprice_<?php echo $val['stock_id'] ?>"> 当前价</span> </td>
+                            <td> <span id="nowrate_<?php echo $val['stock_id'] ?>"> 百分比</span> </td>
                             <td><button class="btn btn-danger" type="submit" onclick="del('<?php echo $val['stock_id'] ?>')">删除</button></td>
                         </tr>
                         <script>
