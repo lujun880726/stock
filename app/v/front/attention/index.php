@@ -61,7 +61,10 @@
                             <td> <span id="price_<?php echo $val['stock_id'] ?>"><?php echo $val['attention_price'] ?></span></td>
                             <td> <span id="nowprice_<?php echo $val['stock_id'] ?>"> 当前价</span> </td>
                             <td> <span id="nowrate_<?php echo $val['stock_id'] ?>"> 百分比</span> </td>
-                            <td><button class="btn btn-danger" type="submit" onclick="del('<?php echo $val['stock_id'] ?>')">删除</button></td>
+                            <td>
+                                <button class="btn btn-danger" type="submit" onclick="del('<?php echo $val['stock_id'] ?>')">删除</button>
+                                <a href="/pl/index/<?php echo $val['stock_id'] ?>.html"><button class="btn btn-danger" type="submit" >千股千评</button></a>
+                            </td>
                         </tr>
                         <script>
                             getNow('<?php echo $val['stock_id'] ?>');

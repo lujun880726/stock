@@ -47,6 +47,7 @@
                                 <ul role="menu" class="dropdown-menu">
 
                                             <li><a href="/attention/index.html">我关注的股票</a></li>
+                                            <li><a href="/pl/index.html"> 千股千评</a></li>
                                     <li class="divider"></li>
                                 </ul>
                             </li>
