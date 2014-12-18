@@ -4,15 +4,12 @@
         $.getJSON(
                 "/attention/getNow/" + stock_id + ".html",
                 function(data) {
-                    $('#nowprice_'+stock_id).html(data.msg.harvest);
-
-                    if (parseFloat(data.msg.harvest) ==  parseFloat($('#price_' + stock_id).html())) {
-                        $('#nowrate_'+stock_id).html('0% ');
-                    } else if (parseFloat(data.msg.harvest) > parseFloat($('#price_' + stock_id).html())) {
-                        $('#nowrate_'+stock_id).html('+' + parseFloat(data.msg.harvest) / parseFloat($('#price_' + stock_id).html()) + '% ');
-                    } else {
-                        $('#nowrate_'+stock_id).html('-' + parseFloat(data.msg.harvest) / parseFloat($('#price_' + stock_id).html()) + '% ');
-                        $('#nowrate_'+stock_id).attr('style', 'color: red');
+                    $('#nowprice_' + stock_id).html(data.msg.harvest);
+                    tmp_now = (parseFloat(data.msg.harvest) - parseFloat($('#price_' + stock_id).html())) / parseFloat($('#price_' + stock_id).html());
+                    $('#nowrate_' + stock_id).html(tmp_now + '% ');
+                    if (tmp_now < 0)
+                    {
+                        $('#nowrate_' + stock_id).attr('style', 'color: red');
                     }
                 }
         );
@@ -55,7 +52,7 @@
                 <?php if ($list) : ?>
                     <?php foreach ($list as $val): ?>
                         <tr>
-                            <td> <?php echo $val['stock_id'] ?> </td>
+                            <td> <a target="_black" href="http://stockhtm.finance.qq.com/sstock/ggcx/<?php echo $val['stock_id'] ?>.shtml"><?php echo $val['stock_id'] ?> </a></td>
                             <td> <?php echo $val['name'] ?> </td>
                             <td> <?php echo date('Y-m-d', $val['ctime']) ?> </td>
                             <td> <span id="price_<?php echo $val['stock_id'] ?>"><?php echo $val['attention_price'] ?></span></td>
@@ -63,7 +60,7 @@
                             <td> <span id="nowrate_<?php echo $val['stock_id'] ?>"> 百分比</span> </td>
                             <td>
                                 <button class="btn btn-danger" type="submit" onclick="del('<?php echo $val['stock_id'] ?>')">删除</button>
-                                <a href="/pl/index/<?php echo $val['stock_id'] ?>.html"><button class="btn btn-danger" type="submit" >千股千评</button></a>
+                                <a target="_black" href="/pl/index/<?php echo $val['stock_id'] ?>.html"><button class="btn btn-danger" type="submit" >千股千评</button></a>
                             </td>
                         </tr>
                         <script>
