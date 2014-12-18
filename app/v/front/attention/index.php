@@ -5,7 +5,7 @@
                 "/attention/getNow/" + stock_id + ".html",
                 function(data) {
                     $('#nowprice_' + stock_id).html(data.msg.harvest);
-                    tmp_now = (parseFloat(data.msg.harvest) - parseFloat($('#price_' + stock_id).html())) / parseFloat($('#price_' + stock_id).html());
+                    tmp_now = (parseFloat(data.msg.harvest) - parseFloat($('#price_' + stock_id).html())) / parseFloat($('#price_' + stock_id).html()) * 100;
                     $('#nowrate_' + stock_id).html(tmp_now + '% ');
                     if (tmp_now < 0)
                     {
