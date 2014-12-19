@@ -20,4 +20,17 @@ class m_pl extends m_mabstract
         return $this->db->get_all($sql);
     }
 
+    public function getOne($stockId, $day = '')
+    {
+        if (empty($day)) {
+            $day = strotime('today');
+        }
+        $sql = "select * from stock_pl  where stock_id = '{$stockId}' ";
+        if ($day) {
+            $sql .= " and ctime = '{$day}' ";
+        }
+        $sql .= ' limit 1 ';
+        return $this->db->get_one($sql);
+    }
+
 }

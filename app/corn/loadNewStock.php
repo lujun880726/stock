@@ -51,7 +51,7 @@ function getStockListBYeastmoney()
                         $type = 'sh';
                     }
                     if (empty($row)) {
-                        $objBase->db->insert('stock', array('stock_id' => $tmp1[0], 'type' => $type, 'create_time' => time(), 'name' => $tmp1[1]));
+                        $objBase->db->insert('stock', array('stock_id' => $tmp1[0], 'type' => $type, 'create_time' => strtotime("today"), 'name' => $tmp1[1]));
                     } else {
                         if (empty($row['name'])) {
                             $objBase->db->update('stock', array('name' => $tmp1[1]), "stock_id = '" . $tmp1[0] . "'"); // iconv("GB2312", "utf-8", $name)
@@ -65,10 +65,10 @@ function getStockListBYeastmoney()
 
                     //`pl_type` tinyint(2) NOT NULL DEFAULT '0' COMMENT '0好，1坏',
                     if ($goodcnt > 0) {
-                        $objBase->db->insert('stock_pl', array('stock_id' => $tmp1[0], 'pl' => $tmp1[3], 'pl_type' => 0, 'ctime' => time()));
+                        $objBase->db->insert('stock_pl', array('stock_id' => $tmp1[0], 'pl' => $tmp1[3], 'pl_type' => 0, 'ctime' => strtotime("today")));
                     }
                     if ($badcnt > 0) {
-                        $objBase->db->insert('stock_pl', array('stock_id' => $tmp1[0], 'pl' => $tmp1[3], 'pl_type' => 1, 'ctime' => time()));
+                        $objBase->db->insert('stock_pl', array('stock_id' => $tmp1[0], 'pl' => $tmp1[3], 'pl_type' => 1, 'ctime' => strtotime("today")));
                     }
                 }
             }
@@ -113,7 +113,7 @@ function getStockListBYgtimg()
                 $stock_id = substr($val, 2, 8);
                 $arr      = $objBase->db->get_one("select stock_id from `stock` where stock_id = '{$stock_id}'");
                 if (empty($arr)) {
-                    $objBase->db->insert('stock', array('stock_id' => $stock_id, 'type' => $type, 'create_time' => time()));
+                    $objBase->db->insert('stock', array('stock_id' => $stock_id, 'type' => $type, 'create_time' => strtotime("today")));
                 }
             }
         }

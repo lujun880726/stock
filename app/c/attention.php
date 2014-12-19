@@ -5,14 +5,14 @@ class c_attention extends c_cabstract
 
     public function indexAction()
     {
-        $err      = '';
-        $row      = array();
+        $err       = '';
+        $row       = array();
         $navTypeId = 0;
-        $obj      = m('m_attention');
-        $stockObj = m('m_stock');
+        $obj       = m('m_attention');
+        $stockObj  = m('m_stock');
         if ($this->isPost()) {
             $stockId     = trim($_POST['stock_id']);
-            $attentionId =   (int) trim($_POST['attention_id']);
+            $attentionId = (int) trim($_POST['attention_id']);
             $attentionCo = trim($_POST['attention_co']);
 
             if ($stockId) {
@@ -51,8 +51,7 @@ class c_attention extends c_cabstract
         $typenav    = explode(',', $tyepnavTmp['config_var']);
 
         $navTypeId = $this->getx(1);
-        if (isset($attentionId) && in_array($attentionId, $typenav))
-        {
+        if (isset($attentionId) && in_array($attentionId, $typenav)) {
             $navTypeId = $attentionId;
         }
 
@@ -66,7 +65,7 @@ class c_attention extends c_cabstract
         $list = $obj->getList($listCon);
 
 
-        return array('err' => $err, 'list' => $list, 'typeList' => $typeListTmp, 'row' => $row, 'typenav' => $typenav,'navTypeId' => $navTypeId);
+        return array('err' => $err, 'list' => $list, 'typeList' => $typeListTmp, 'row' => $row, 'typenav' => $typenav, 'navTypeId' => $navTypeId);
     }
 
     public function getNowAction()
@@ -75,6 +74,12 @@ class c_attention extends c_cabstract
         $stockObj  = m('m_stock');
         $stockInfo = $stockObj->getStock($stockId);
         $tmpInfo   = getStockAPI($stockInfo['stock_id'], $stockInfo['type']);
+
+
+        $plObj         = m('m_pl');
+        $tmp           = $plObj->getOne($stockId, strtotime("today"));
+        $tmpInfo['pl'] = $tmp['pl'];
+
         $this->jsonx($tmpInfo, 'su');
     }
 

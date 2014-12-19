@@ -11,7 +11,7 @@ class m_attention extends m_mabstract
 
     public function add($strArr)
     {
-        $strArr['ctime'] = time();
+        $strArr['ctime'] = strtotime("today");
         $tmp             = $this->db->insert('my_attention_stock', $strArr);
         return $tmp;
     }

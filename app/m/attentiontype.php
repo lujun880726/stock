@@ -11,7 +11,7 @@ class m_attentiontype extends m_mabstract
 
     public function add($strArr)
     {
-        $strArr['ctime'] = time();
+        $strArr['ctime'] = strtotime("today");
         $tmp             = $this->db->insert('attention_type', $strArr);
         return $tmp;
     }

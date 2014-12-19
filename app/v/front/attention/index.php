@@ -7,6 +7,7 @@
                     $('#nowprice_' + stock_id).html(data.msg.harvest);
                     tmp_now = (parseFloat(data.msg.harvest) - parseFloat($('#price_' + stock_id).html())) / parseFloat($('#price_' + stock_id).html()) * 100;
                     $('#nowrate_' + stock_id).html(tmp_now + '% ');
+                    $('#qgqp_' + stock_id).html(data.msg.pl);
                     if (tmp_now < 0)
                     {
                         $('#nowrate_' + stock_id).attr('style', 'color: red');
@@ -75,7 +76,8 @@
                     <td> 百分比 </td>
                     <td> 关注类型 </td>
                     <td> 理由 </td>
-                    <td> 操作 </td>
+                    <td> 千股千评 </td>
+                    <td>操作</td>
                 </tr>
                 <?php if ($list) : ?>
                     <?php foreach ($list as $val): ?>
@@ -88,6 +90,7 @@
                             <td> <span id="nowrate_<?php echo $val['stock_id'] ?>"> 百分比</span> </td>
                             <td> <?php echo $typeList[$val['attention_id']] ?> </td>
                             <td> <?php echo $val['attention_co'] ?> </td>
+                             <td> <span id="qgqp_<?php echo $val['stock_id'] ?>"> 千股千评</span> </td>
                             <td>
                                 <button class="btn btn-danger" type="submit" onclick="del('<?php echo $val['stock_id'] ?>')">删除</button>
                                 <a  href="/attention/index/<?php echo $val['stock_id'] ?>.html"><button class="btn btn-danger" type="submit" >修改</button></a>
