@@ -24,9 +24,9 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <script src="http://cdn.bootcss.com/jquery/2.1.1-rc2/jquery.min.js"></script>
-<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
     </head>
     <body>
         <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
@@ -41,23 +41,31 @@
                     <a href="/" class="navbar-brand">股票</a>
                 </div>
                 <div class="navbar-collapse collapse" id="navbar">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">股票<span class="caret"></span></a>
-                                <ul role="menu" class="dropdown-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">股票<span class="caret"></span></a>
+                            <ul role="menu" class="dropdown-menu">
 
-                                            <li><a href="/attention/index.html">我关注的股票</a></li>
-                                            <li><a href="/pl/index.html"> 千股千评</a></li>
-                                            <li><a href="/attentiontype/index.html"> 关注类型</a></li>
-                                    <li class="divider"></li>
-                                </ul>
-                            </li>
-                        </ul>
+                                <li><a href="/attention/index.html">我关注的股票</a></li>
+                                <li><a href="/pl/index.html"> 千股千评</a></li>
+                                <li class="divider"></li>
 
-<!--                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">123123123</a></li>
-                            <li><a href="login.php?login=out">登出</a></li>
-                        </ul>-->
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">设置<span class="caret"></span></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a href="/attentiontype/index.html"> 关注类型</a></li>
+                                <li><a href="/settings/typenav.html"> 关注NAV设置</a></li>
+                                <li class="divider"></li>
+                            </ul>
+                        </li>
+                        <!--                            <li><a href="#">123123123</a></li>
+                                                    <li><a href="login.php?login=out">登出</a></li>-->
+                    </ul>
                 </div><!--/.nav-collapse -->
             </div>
         </nav>

@@ -37,7 +37,7 @@
             <form role="form" method="post" name="form1" action="/attentiontype/index.html">
                 <div class="form-group">
                     <label for="exampleInputEmail1">分类名称</label>
-                    <input type="" class="form-control" id="exampleInputEmail1"  name="attention_name" placeholder="ACCOUT" size="10" value="<?php  echo  @$row['attention_name'] ?>">
+                    <input type="" class="form-control" id="exampleInputEmail1"  name="attention_name" placeholder="ACCOUT" size="10" value="<?php echo @$row['attention_name'] ?>">
                     <textarea name="explain_co"><?php echo @$row['explain_co'] ?></textarea>
                 </div>
                 <button type="submit" class="btn btn-default">提交</button>
@@ -48,7 +48,7 @@
                     <td> ID </td>
                     <td> 名称 </td>
                     <td> 说明 </td>
-                     <td> 日期 </td>
+                    <td> 日期 </td>
                     <td> 操作 </td>
                 </tr>
                 <?php if ($list) : ?>
@@ -56,8 +56,8 @@
                         <tr>
                             <td> <?php echo $val['id'] ?></td>
                             <td> <?php echo $val['attention_name'] ?> </td>
-                            <td> <?php echo  $val['explain_co'] ?> </td>
-                            <td> <?php echo  date('Y-m-d',$val['ctime']) ?> </td>
+                            <td> <?php echo $val['explain_co'] ?> </td>
+                            <td> <?php echo date('Y-m-d', $val['ctime']) ?> </td>
                             <td>
                                 <a  href="/attentiontype/index/<?php echo $val['id'] ?>.html"><button class="btn btn-danger" type="submit" >修改</button></a>
                             </td>

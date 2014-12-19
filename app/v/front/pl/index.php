@@ -12,7 +12,7 @@
                 </tr>
                 <?php if ($list) : ?>
                     <?php foreach ($list as $val): ?>
-                        <tr style="<?php if ($val['pl_type'] == 1) echo 'color: red';?>">
+                        <tr style="<?php if ($val['pl_type'] == 1) echo 'color: red'; ?>">
                             <td> <?php echo $val['stock_id'] ?> </td>
                             <td> <?php echo $val['name'] ?> </td>
                             <td> <?php echo date('Y-m-d', $val['ctime']) ?> </td>

@@ -32,14 +32,15 @@
     <!-- Main component for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="tab-content">
+
             <form role="form" method="post" name="form1" action="/attention/index.html">
                 <div class="form-group">
                     <label for="exampleInputEmail1">股票码</label>
                     <input type="" class="form-control" id="exampleInputEmail1"  name="stock_id" placeholder="ACCOUT" size="10" value="<?php echo @$row['stock_id'] ?>">
                     <select name="attention_id" >
-                        <?php foreach($typeList as $typeListTmpKey => $typeListTmpVal) :?>
-                        <option value="<?php echo $typeListTmpKey;?>" <?php if ($typeListTmpKey == @$row['attention_id']) echo 'selected'?>><?php echo $typeListTmpVal;?></option>
-                        <?php endforeach;?>
+                        <?php foreach ($typeList as $typeListTmpKey => $typeListTmpVal) : ?>
+                            <option value="<?php echo $typeListTmpKey; ?>" <?php if ($typeListTmpKey == @$row['attention_id']) echo 'selected' ?>><?php echo $typeListTmpVal; ?></option>
+                        <?php endforeach; ?>
                     </select>
                     <br/>
                     <textarea name="attention_co"><?php echo @$row['attention_co'] ?></textarea>
@@ -47,6 +48,23 @@
                 <input type="hidden" name='id' value="<?php echo @$row['id'] ?>" />
                 <button type="submit" class="btn btn-default">关注</button>
             </form>
+            <br/>
+            <div class="tab-content">
+
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" <?php if ($navTypeId < 1) echo 'class="active"';?>><a href="/attention/index/_0.html">其它全部</a></li>
+                    <?php if ($typenav) :?>
+                    <?php foreach($typenav as $val) :?>
+                    <li role="presentation" <?php if ($val == $navTypeId) echo 'class="active"';?>><a href="/attention/index/_<?php echo $val;?>.html"><?php echo $typeList[$val]?></a></li>
+                    <?php endforeach;?>
+                    <?php endif;?>
+
+<!--                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">Profile</a></li>
+                    <li role="presentation"><a href="#">Messages</a></li>-->
+                </ul>
+            </div>
+            <br/>
             <table class="table table-bordered">
                 <tr>
                     <td> 股票 </td>

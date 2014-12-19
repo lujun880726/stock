@@ -11,7 +11,7 @@ class m_stock extends m_mabstract
 
     function getStock($stockId)
     {
-          return $this->db->get_one("select * from stock where  stock_id = '{$stockId}' ");
+        return $this->db->get_one("select * from stock where  stock_id = '{$stockId}' ");
     }
 
 }

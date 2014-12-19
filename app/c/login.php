@@ -24,7 +24,7 @@ class c_login extends c_cabstract
                 if ($account != ADMIN_ACCOUT || $pwd != ADMIN_PWD) {
                     $err = '账号或密码不正确';
                 } else {
-                    $_SESSION['auth'] = 1;
+                    $_SESSION['auth']     = 1;
                     $_SESSION['username'] = 'admin';
                     header("Location: /");
                 }

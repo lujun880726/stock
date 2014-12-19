@@ -11,5 +11,4 @@
 class m_base extends m_mabstract
 {
 
-    
 }

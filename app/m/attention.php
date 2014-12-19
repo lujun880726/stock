@@ -16,9 +16,9 @@ class m_attention extends m_mabstract
         return $tmp;
     }
 
-    public function getList()
+    public function getList($con = '')
     {
-        return $this->db->get_all('select a.*,b.name,b.type from my_attention_stock a join stock b on a.stock_id=b.stock_id  where 1 ORDER BY a.id desc');
+        return $this->db->get_all('select a.*,b.name,b.type from my_attention_stock a join stock b on a.stock_id=b.stock_id  where 1 ' . $con. ' ORDER BY a.id desc');
     }
 
     public function del($stockId)

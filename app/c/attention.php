@@ -6,12 +6,13 @@ class c_attention extends c_cabstract
     public function indexAction()
     {
         $err      = '';
-        $row = array();
+        $row      = array();
+        $navTypeId = 0;
         $obj      = m('m_attention');
         $stockObj = m('m_stock');
         if ($this->isPost()) {
             $stockId     = trim($_POST['stock_id']);
-            $attentionId = (int) trim($_POST['attention_id']);
+            $attentionId =   (int) trim($_POST['attention_id']);
             $attentionCo = trim($_POST['attention_co']);
 
             if ($stockId) {
@@ -40,11 +41,32 @@ class c_attention extends c_cabstract
             }
         }
 
-        $list        = $obj->getList();
+        //分类
         $objType     = m('m_attentiontype');
         $typeListTmp = $objType->listKV();
 
-        return array('err' => $err, 'list' => $list, 'typeList' => $typeListTmp,'row' => $row);
+        //nva
+        $configObj  = m('m_configinfo');
+        $tyepnavTmp = $configObj->typenavGet();
+        $typenav    = explode(',', $tyepnavTmp['config_var']);
+
+        $navTypeId = $this->getx(1);
+        if (isset($attentionId) && in_array($attentionId, $typenav))
+        {
+            $navTypeId = $attentionId;
+        }
+
+        //数据
+        $listCon = '';
+        if ($navTypeId > 0) {
+            $listCon = " and `attention_id` =  '{$navTypeId}' ";
+        } else {
+            $listCon = "  and `attention_id`  not in ('" . implode("','", $typenav) . "')  ";
+        }
+        $list = $obj->getList($listCon);
+
+
+        return array('err' => $err, 'list' => $list, 'typeList' => $typeListTmp, 'row' => $row, 'typenav' => $typenav,'navTypeId' => $navTypeId);
     }
 
     public function getNowAction()

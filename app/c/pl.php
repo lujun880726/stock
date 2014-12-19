@@ -8,15 +8,16 @@
 
 class c_pl extends c_cabstract
 {
+
     public function indexAction()
     {
         $obj = m('m_pl');
 
         $stockId = $this->getx(0);
         if ($stockId) {
-             $list = $obj->getList($stockId);
+            $list = $obj->getList($stockId);
         } else {
-             $list = $obj->getList();
+            $list = $obj->getList();
         }
         return array('list' => $list);
     }

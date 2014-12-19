@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2014-12-19 13:41:24
+Date: 2014-12-19 15:32:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -25,7 +25,7 @@ CREATE TABLE `attention_type` (
   `explain_co` text NOT NULL,
   `ctime` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='关注分类';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='关注分类';
 
 -- ----------------------------
 -- Records of attention_type
@@ -33,6 +33,23 @@ CREATE TABLE `attention_type` (
 INSERT INTO `attention_type` VALUES ('1', '11111', '222222', '1418960023');
 INSERT INTO `attention_type` VALUES ('2', '444', '6666', '1418960880');
 INSERT INTO `attention_type` VALUES ('3', '33333', '11111', '1418966418');
+INSERT INTO `attention_type` VALUES ('4', 'qita', '123123', '1418973702');
+INSERT INTO `attention_type` VALUES ('5', 'qit23324234', '', '1418973721');
+
+-- ----------------------------
+-- Table structure for `config_info`
+-- ----------------------------
+DROP TABLE IF EXISTS `config_info`;
+CREATE TABLE `config_info` (
+  `config_name` varchar(255) NOT NULL,
+  `config_var` text NOT NULL,
+  PRIMARY KEY (`config_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='配置';
+
+-- ----------------------------
+-- Records of config_info
+-- ----------------------------
+INSERT INTO `config_info` VALUES ('typenav', '1,2,3');
 
 -- ----------------------------
 -- Table structure for `day_harvest_info`
@@ -114,13 +131,22 @@ CREATE TABLE `my_attention_stock` (
   `attention_price` decimal(5,3) NOT NULL COMMENT '关注时价格',
   `ctime` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COMMENT='我关注的股票';
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COMMENT='我关注的股票';
 
 -- ----------------------------
 -- Records of my_attention_stock
 -- ----------------------------
 INSERT INTO `my_attention_stock` VALUES ('9', '600317', '3', '33333', '5.480', '1418802750');
 INSERT INTO `my_attention_stock` VALUES ('13', '000001', '2', 'ffffff', '14.790', '1418967249');
+INSERT INTO `my_attention_stock` VALUES ('14', '000002', '1', '21323', '11.480', '1418973642');
+INSERT INTO `my_attention_stock` VALUES ('15', '600886', '1', '123123', '9.700', '1418973662');
+INSERT INTO `my_attention_stock` VALUES ('16', '000778', '2', '', '6.010', '1418973677');
+INSERT INTO `my_attention_stock` VALUES ('17', '600876', '3', '600876', '7.240', '1418973686');
+INSERT INTO `my_attention_stock` VALUES ('18', '600737', '4', '', '8.620', '1418973713');
+INSERT INTO `my_attention_stock` VALUES ('19', '600176', '5', '', '15.390', '1418973732');
+INSERT INTO `my_attention_stock` VALUES ('20', '600550', '5', '212321', '6.420', '1418973995');
+INSERT INTO `my_attention_stock` VALUES ('21', '600854', '1', '231232', '5.730', '1418974191');
+INSERT INTO `my_attention_stock` VALUES ('22', '600758', '3', '1231', '9.120', '1418974271');
 
 -- ----------------------------
 -- Table structure for `stock`
