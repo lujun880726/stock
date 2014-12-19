@@ -48,6 +48,7 @@
 
                                             <li><a href="/attention/index.html">我关注的股票</a></li>
                                             <li><a href="/pl/index.html"> 千股千评</a></li>
+                                            <li><a href="/attentiontype/index.html"> 关注类型</a></li>
                                     <li class="divider"></li>
                                 </ul>
                             </li>

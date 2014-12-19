@@ -10,10 +10,29 @@ Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2014-12-17 17:55:58
+Date: 2014-12-19 13:41:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `attention_type`
+-- ----------------------------
+DROP TABLE IF EXISTS `attention_type`;
+CREATE TABLE `attention_type` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `attention_name` varchar(255) NOT NULL,
+  `explain_co` text NOT NULL,
+  `ctime` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='关注分类';
+
+-- ----------------------------
+-- Records of attention_type
+-- ----------------------------
+INSERT INTO `attention_type` VALUES ('1', '11111', '222222', '1418960023');
+INSERT INTO `attention_type` VALUES ('2', '444', '6666', '1418960880');
+INSERT INTO `attention_type` VALUES ('3', '33333', '11111', '1418966418');
 
 -- ----------------------------
 -- Table structure for `day_harvest_info`
@@ -90,15 +109,18 @@ DROP TABLE IF EXISTS `my_attention_stock`;
 CREATE TABLE `my_attention_stock` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `stock_id` varchar(6) NOT NULL,
+  `attention_id` bigint(20) NOT NULL,
+  `attention_co` varchar(255) NOT NULL,
   `attention_price` decimal(5,3) NOT NULL COMMENT '关注时价格',
   `ctime` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='我关注的股票';
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COMMENT='我关注的股票';
 
 -- ----------------------------
 -- Records of my_attention_stock
 -- ----------------------------
-INSERT INTO `my_attention_stock` VALUES ('9', '600317', '5.470', '1418802750');
+INSERT INTO `my_attention_stock` VALUES ('9', '600317', '3', '33333', '5.480', '1418802750');
+INSERT INTO `my_attention_stock` VALUES ('13', '000001', '2', 'ffffff', '14.790', '1418967249');
 
 -- ----------------------------
 -- Table structure for `stock`

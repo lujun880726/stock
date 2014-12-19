@@ -3,14 +3,17 @@
 class c_attention extends c_cabstract
 {
 
-
     public function indexAction()
     {
         $err      = '';
+        $row = array();
         $obj      = m('m_attention');
         $stockObj = m('m_stock');
         if ($this->isPost()) {
-            $stockId = trim($_POST['stock_id']);
+            $stockId     = trim($_POST['stock_id']);
+            $attentionId = (int) trim($_POST['attention_id']);
+            $attentionCo = trim($_POST['attention_co']);
+
             if ($stockId) {
                 $stockInfo = $stockObj->getStock($stockId);
                 if (!empty($stockInfo)) {
@@ -18,17 +21,30 @@ class c_attention extends c_cabstract
                     if ($tmpInfo == -1) {
                         $err = '无法获取请稍后重试';
                     } else {
-                        $obj->add(array('stock_id' => $stockId, 'attention_price' => $tmpInfo['harvest']));
+                        $setArr = array('stock_id' => $stockId, 'attention_price' => $tmpInfo['harvest'], 'attention_id' => $attentionId, 'attention_co' => $attentionCo);
+                        $id     = (int) $_POST['id'];
+                        if ($id) {
+                            $obj->uInfo($setArr, $id);
+                        } else {
+                            $obj->add($setArr);
+                        }
                     }
                 } else {
                     $err = '没有此股票';
                 }
             }
+        } else {
+            $stockId = $this->getx(0);
+            if ($stockId > 0) {
+                $row = $obj->getOne($stockId);
+            }
         }
 
-        $list = $obj->getList();
+        $list        = $obj->getList();
+        $objType     = m('m_attentiontype');
+        $typeListTmp = $objType->listKV();
 
-        return array('err' => $err, 'list' => $list);
+        return array('err' => $err, 'list' => $list, 'typeList' => $typeListTmp,'row' => $row);
     }
 
     public function getNowAction()

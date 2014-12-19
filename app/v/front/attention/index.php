@@ -22,7 +22,7 @@
                 {stock_id: stock_id},
         function(data) {
             alert('删除成功');
-            location.reload();
+            location.href = '/attention/index.html';
         },
                 "json"
                 );
@@ -35,8 +35,16 @@
             <form role="form" method="post" name="form1" action="/attention/index.html">
                 <div class="form-group">
                     <label for="exampleInputEmail1">股票码</label>
-                    <input type="" class="form-control" id="exampleInputEmail1"  name="stock_id" placeholder="ACCOUT" size="10">
+                    <input type="" class="form-control" id="exampleInputEmail1"  name="stock_id" placeholder="ACCOUT" size="10" value="<?php echo @$row['stock_id'] ?>">
+                    <select name="attention_id" >
+                        <?php foreach($typeList as $typeListTmpKey => $typeListTmpVal) :?>
+                        <option value="<?php echo $typeListTmpKey;?>" <?php if ($typeListTmpKey == @$row['attention_id']) echo 'selected'?>><?php echo $typeListTmpVal;?></option>
+                        <?php endforeach;?>
+                    </select>
+                    <br/>
+                    <textarea name="attention_co"><?php echo @$row['attention_co'] ?></textarea>
                 </div>
+                <input type="hidden" name='id' value="<?php echo @$row['id'] ?>" />
                 <button type="submit" class="btn btn-default">关注</button>
             </form>
             <table class="table table-bordered">
@@ -47,6 +55,8 @@
                     <td> 关注时价格 </td>
                     <td> 当前价 </td>
                     <td> 百分比 </td>
+                    <td> 关注类型 </td>
+                    <td> 理由 </td>
                     <td> 操作 </td>
                 </tr>
                 <?php if ($list) : ?>
@@ -58,8 +68,11 @@
                             <td> <span id="price_<?php echo $val['stock_id'] ?>"><?php echo $val['attention_price'] ?></span></td>
                             <td> <span id="nowprice_<?php echo $val['stock_id'] ?>"> 当前价</span> </td>
                             <td> <span id="nowrate_<?php echo $val['stock_id'] ?>"> 百分比</span> </td>
+                            <td> <?php echo $typeList[$val['attention_id']] ?> </td>
+                            <td> <?php echo $val['attention_co'] ?> </td>
                             <td>
                                 <button class="btn btn-danger" type="submit" onclick="del('<?php echo $val['stock_id'] ?>')">删除</button>
+                                <a target="_black" href="/attention/index/<?php echo $val['stock_id'] ?>.html"><button class="btn btn-danger" type="submit" >修改</button></a>
                                 <a target="_black" href="/pl/index/<?php echo $val['stock_id'] ?>.html"><button class="btn btn-danger" type="submit" >千股千评</button></a>
                             </td>
                         </tr>

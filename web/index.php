@@ -11,8 +11,8 @@ if ((isset($_REQUEST['dbg']) && 'debug' == $_REQUEST['dbg'])) {
     ini_set('display_errors', 'On');
     error_reporting(E_ALL);
 } else {
-    ini_set('display_errors', 'Off');
-    error_reporting(0);
+    ini_set('display_errors', 'on');
+    error_reporting(E_ALL);
 }
 
 

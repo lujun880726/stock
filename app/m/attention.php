@@ -12,10 +12,9 @@ class m_attention extends m_mabstract
     public function add($strArr)
     {
         $strArr['ctime'] = time();
-        $tmp = $this->db->insert('my_attention_stock', $strArr);
+        $tmp             = $this->db->insert('my_attention_stock', $strArr);
         return $tmp;
     }
-
 
     public function getList()
     {
@@ -24,6 +23,17 @@ class m_attention extends m_mabstract
 
     public function del($stockId)
     {
-          return $this->db->delete('my_attention_stock', "stock_id = '{$stockId}'");
+        return $this->db->delete('my_attention_stock', "stock_id = '{$stockId}'");
     }
+
+    public function uInfo($strArr, $id)
+    {
+        $this->db->update('my_attention_stock', $strArr, " id = {$id}");
+    }
+
+    public function getOne($stockId)
+    {
+        return $this->db->get_one("select * from my_attention_stock  where stock_id = '{$stockId}' ");
+    }
+
 }
