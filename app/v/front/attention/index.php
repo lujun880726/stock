@@ -12,6 +12,12 @@
                     {
                         $('#nowrate_' + stock_id).attr('style', 'color: red');
                     }
+                    nowzf  = (parseFloat(data.msg.harvest) - parseFloat(data.msg.lastprice)) / parseFloat(data.msg.lastprice) * 100;
+                    $('#nowzf_' + stock_id).html( nowzf  + '% ');
+                    if (nowzf < 0)
+                    {
+                        $('#nowzf_' + stock_id).attr('style', 'color: red');
+                    }
                 }
         );
     }
@@ -73,6 +79,7 @@
                     <td> 关注日期 </td>
                     <td> 关注时价格 </td>
                     <td> 当前价 </td>
+                    <td> 今日涨幅 </td>
                     <td> 百分比 </td>
                     <td> 关注类型 </td>
                     <td> 理由 </td>
@@ -87,6 +94,7 @@
                             <td> <?php echo date('Y-m-d', $val['ctime']) ?> </td>
                             <td> <span id="price_<?php echo $val['stock_id'] ?>"><?php echo $val['attention_price'] ?></span></td>
                             <td> <span id="nowprice_<?php echo $val['stock_id'] ?>"> 当前价</span> </td>
+                            <td> <span id="nowzf_<?php echo $val['stock_id'] ?>"> 今日涨幅</span> </td>
                             <td> <span id="nowrate_<?php echo $val['stock_id'] ?>"> 百分比</span> </td>
                             <td> <?php echo $typeList[$val['attention_id']] ?> </td>
                             <td> <?php echo $val['attention_co'] ?> </td>

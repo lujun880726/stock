@@ -29,6 +29,7 @@ function getStockAPI($stockId, $stockTYpe)
     $footer   = str_replace(array('",la', '"'), '', $tmp['8']);
     $harvest  = str_replace(array('",type', '"'), '', $tmp['9']);
     $vol      = str_replace(array('",tu', '"'), '', $tmp['5']);
+    $lastprice      = str_replace(array('",op', '"'), '', $tmp['3']);
     $tempTIme = explode(' ', str_replace(array('"', '"'), '', $tmp['11']));
     $dayArr   = array(
         'stock_id'  => $stockId,
@@ -42,6 +43,7 @@ function getStockAPI($stockId, $stockTYpe)
         'footer'    => $footer,
         'harvest'   => $harvest,
         'vol'       => $vol,
+        'lastprice' => $lastprice,
     );
     return $dayArr;
 }
