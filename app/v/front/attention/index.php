@@ -46,7 +46,7 @@
                     <input type="" class="form-control" id="exampleInputEmail1"  name="stock_id" placeholder="ACCOUT" size="10" value="<?php echo @$row['stock_id'] ?>">
                     <select name="attention_id" >
                         <?php foreach ($typeList as $typeListTmpKey => $typeListTmpVal) : ?>
-                            <option value="<?php echo $typeListTmpKey; ?>" <?php if ($typeListTmpKey == @$row['attention_id']) echo 'selected' ?>><?php echo $typeListTmpVal; ?></option>
+                            <option value="<?php echo $typeListTmpKey; ?>" <?php if ($typeListTmpKey == @$navTypeId) echo 'selected' ?>><?php echo $typeListTmpVal; ?></option>
                         <?php endforeach; ?>
                     </select>
                     <br/>
