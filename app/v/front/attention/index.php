@@ -59,10 +59,10 @@
             <div class="tab-content">
 
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" <?php if ($navTypeId < 1) echo 'class="active"';?>><a href="/attention/index/_0.html">其它全部</a></li>
+                    <li role="presentation" <?php if ($navTypeId < 1) echo 'class="active"';?>><a href="/attention/index/_0.html">重合</a></li>
                     <?php if ($typenav) :?>
-                    <?php foreach($typenav as $val) :?>
-                    <li role="presentation" <?php if ($val == $navTypeId) echo 'class="active"';?>><a href="/attention/index/_<?php echo $val;?>.html"><?php echo $typeList[$val]?></a></li>
+                    <?php foreach($typenav as $key=>$val) :?>
+                    <li role="presentation" <?php if ($key == $navTypeId) echo 'class="active"';?>><a href="/attention/index/_<?php echo $key;?>.html"><?php echo $val?></a></li>
                     <?php endforeach;?>
                     <?php endif;?>
 

@@ -44,11 +44,10 @@ class c_attention extends c_cabstract
         //分类
         $objType     = m('m_attentiontype');
         $typeListTmp = $objType->listKV();
-
         //nva
-        $configObj  = m('m_configinfo');
-        $tyepnavTmp = $configObj->typenavGet();
-        $typenav    = explode(',', $tyepnavTmp['config_var']);
+//        $configObj  = m('m_configinfo');
+//        $tyepnavTmp = $configObj->typenavGet();
+//        $typenav    = explode(',', $tyepnavTmp['config_var']);
 
         $navTypeId = $this->getx(1);
         if (isset($attentionId) && in_array($attentionId, $typenav)) {
@@ -59,13 +58,14 @@ class c_attention extends c_cabstract
         $listCon = '';
         if ($navTypeId > 0) {
             $listCon = " and `attention_id` =  '{$navTypeId}' ";
+             $list = $obj->getList($listCon);
         } else {
-            $listCon = "  and `attention_id`  not in ('" . implode("','", $typenav) . "')  ";
+             $list = $obj->getListSame();
         }
-        $list = $obj->getList($listCon);
 
 
-        return array('err' => $err, 'list' => $list, 'typeList' => $typeListTmp, 'row' => $row, 'typenav' => $typenav, 'navTypeId' => $navTypeId);
+
+        return array('err' => $err, 'list' => $list, 'typeList' => $typeListTmp, 'row' => $row, 'typenav' => $typeListTmp, 'navTypeId' => $navTypeId);
     }
 
     public function getNowAction()
