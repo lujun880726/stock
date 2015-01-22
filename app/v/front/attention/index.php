@@ -29,7 +29,7 @@
                 {stock_id: stock_id},
         function(data) {
             alert('删除成功');
-            location.href = '/attention/index.html';
+            location.href = '/attention/index/_<?php echo @$navTypeId;?>.html';
         },
                 "json"
                 );
