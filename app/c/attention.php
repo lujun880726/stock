@@ -50,7 +50,7 @@ class c_attention extends c_cabstract
 //        $typenav    = explode(',', $tyepnavTmp['config_var']);
 
         $navTypeId = $this->getx(1);
-        if (isset($attentionId) && in_array($attentionId, $typenav)) {
+        if (isset($attentionId) && isset($typeListTmp[$attentionId])) {
             $navTypeId = $attentionId;
         }
 
