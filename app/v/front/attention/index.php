@@ -101,7 +101,7 @@
                              <td> <span id="qgqp_<?php echo $val['stock_id'] ?>"> 千股千评</span> </td>
                             <td>
                                 <button class="btn btn-danger" type="submit" onclick="del('<?php echo $val['stock_id'] ?>')">删除</button>
-                                <a  href="/attention/index/<?php echo $val['stock_id'] ?>.html"><button class="btn btn-danger" type="submit" >修改</button></a>
+                                <a  href="/attention/index/<?php echo $val['stock_id'] ?>_<?php echo $navTypeId?>.html"><button class="btn btn-danger" type="submit" >修改</button></a>
                                 <a target="_black" href="/pl/index/<?php echo $val['stock_id'] ?>.html"><button class="btn btn-danger" type="submit" >千股千评</button></a>
                             </td>
                         </tr>
