@@ -9,7 +9,7 @@ set_time_limit(0);
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
-include '../../web/init.php';
+include dirname(dirname(dirname(__FILE__))).'/web/init.php';
 
 getStockListBYeastmoney();
 
