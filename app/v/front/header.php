@@ -46,8 +46,10 @@
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">股票<span class="caret"></span></a>
                             <ul role="menu" class="dropdown-menu">
 
-                                <li><a href="/attention/index.html">我关注的股票</a></li>
-                                <li><a href="/pl/index.html"> 千股千评</a></li>
+<!--                                <li><a href="/attention/index.html">我关注的股票</a></li>
+                                <li><a href="/pl/index.html"> 千股千评</a></li>-->
+ <li><a href="/formula/index_1.html"> 选股</a></li>
+
                                 <li class="divider"></li>
 
                             </ul>
@@ -58,8 +60,9 @@
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">设置<span class="caret"></span></a>
                             <ul role="menu" class="dropdown-menu">
-                                <li><a href="/attentiontype/index.html"> 关注类型</a></li>
-                                <li><a href="/settings/typenav.html"> 关注NAV设置</a></li>
+<!--                                <li><a href="/attentiontype/index.html"> 关注类型</a></li>
+                                <li><a href="/settings/typenav.html"> 关注NAV设置</a></li>-->
+                                <li><a href="/formula/add.html"> 添加公式股票</a></li>
                                 <li class="divider"></li>
                             </ul>
                         </li>

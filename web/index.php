@@ -60,6 +60,7 @@ if ('/' == $REQUEST_URI) {
 
 include 'init.php';
 include 'fun.php';
+include 'config.php';
 
 //$fFile = ROOT_C . $f . '.php';
 //if (!file_exists($fFile)) {
