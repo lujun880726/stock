@@ -24,7 +24,7 @@ class c_formula extends c_cabstract {
                 $list[$val['create_day']][] =  $val;
             }
         }
-
+        
         return array('err' => '', 'navTypeId' => $navTypeId, 'list' => $list);
     }
 

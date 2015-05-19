@@ -48,7 +48,7 @@
 
 <!--                                <li><a href="/attention/index.html">我关注的股票</a></li>
                                 <li><a href="/pl/index.html"> 千股千评</a></li>-->
- <li><a href="/formula/index_1.html"> 选股</a></li>
+ <li><a href="/formula/index/1.html"> 选股</a></li>
 
                                 <li class="divider"></li>
 
