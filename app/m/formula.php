@@ -16,12 +16,12 @@ class m_formula extends m_mabstract {
     }
 
     public function getList($type) {
-        $tmp = date('Y-m-d', strtotime("-30 day"));
+        $tmp = date('Y-m-d', strtotime("-10 day"));
         return $this->db->get_all("select * from formula_select where create_day > '{$tmp}' and date_type = '{$type}'");
     }
 
     public function getListunion() {
-        $tmp = date('Y-m-d', strtotime("-30 day"));
+        $tmp = date('Y-m-d', strtotime("-10 day"));
         return $this->db->get_all("select * from (select *,count(*) as num from formula_select GROUP BY create_day,stock_id) as tb1 where num > 1 and create_day > '" . $tmp . "' order by create_time desc ;");
     }
 
