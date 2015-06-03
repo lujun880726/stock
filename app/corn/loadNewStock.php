@@ -86,7 +86,7 @@ function getStockListBYeastmoney() {
  * 获取机构关点
  * @param type $stockId
  */
-function organizationViewpointByQQ($stockId, $type,$attentionPrice) {
+function organizationViewpointByQQ($stockId, $type) {
   //  $type = 'sz';
   //  $stockId = '300170';
     $url = "http://gu.qq.com/" . $type . $stockId;
@@ -95,7 +95,12 @@ function organizationViewpointByQQ($stockId, $type,$attentionPrice) {
         $data = fileGetContents($url);
     }
     if ($data) {
+        str_replace('g_StockRating', '', $data,$cnt);
+        if ($cnt < 1) {
+            return '';
+        }
         $res = trim(getStr($data, 'g_StockRating =', ';'));
+        
         
         $tmp = explode(":'", $res);
         if (getAJ($tmp[1],"',") == '--'  || empty(getAJ($tmp[1],"',")))
