@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50537
 File Encoding         : 65001
 
-Date: 2015-05-15 18:17:49
+Date: 2015-06-03 14:00:06
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -346,7 +346,7 @@ CREATE TABLE `formula_select` (
   `create_time` int(11) DEFAULT NULL,
   `create_day` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1849 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='选股公式选出的数据';
+) ENGINE=InnoDB AUTO_INCREMENT=1924 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='选股公式选出的数据';
 
 -- ----------------------------
 -- Records of formula_select
@@ -370,7 +370,6 @@ INSERT INTO `formula_select` VALUES ('1421', '600704', '物产中大', '28.41', 
 INSERT INTO `formula_select` VALUES ('1422', '600714', '金瑞矿业', '15.73', '0.70', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1423', '600735', '新华锦', '20.87', '1.90', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1424', '600736', '苏州高新', '10.31', '3.00', '1', '1431619200', '2015-05-15');
-INSERT INTO `formula_select` VALUES ('1425', '600776', '东方通信', '17.24', '3.42', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1426', '600781', '辅仁药业', '28.74', '2.97', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1427', '600816', '安信信托', '38.80', '0.08', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1428', '600822', '上海物贸', '15.00', '0.74', '1', '1431619200', '2015-05-15');
@@ -382,7 +381,6 @@ INSERT INTO `formula_select` VALUES ('1433', '600992', '贵绳股份', '18.76', 
 INSERT INTO `formula_select` VALUES ('1434', '601137', '博威合金', '27.07', '0.56', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1435', '601908', '京运通', '20.92', '1.55', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1436', '000040', '宝安地产', '11.25', '6.13', '1', '1431619200', '2015-05-15');
-INSERT INTO `formula_select` VALUES ('1437', '000509', '华塑控股', '9.79', '6.53', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1438', '000536', '华映科技', '21.37', '0.42', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1439', '000611', '*ST蒙发', '9.12', '1.00', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1440', '000695', '滨海能源', '22.73', '3.37', '1', '1431619200', '2015-05-15');
@@ -392,7 +390,6 @@ INSERT INTO `formula_select` VALUES ('1443', '000762', '西藏矿业', '20.19', 
 INSERT INTO `formula_select` VALUES ('1444', '000791', '甘肃电投', '17.83', '9.99', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1445', '000803', '金宇车城', '33.96', '9.23', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1446', '000816', '江淮动力', '14.99', '5.56', '1', '1431619200', '2015-05-15');
-INSERT INTO `formula_select` VALUES ('1447', '000821', '京山轻机', '19.36', '1.89', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1448', '000852', '江钻股份', '30.27', '2.71', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1449', '000925', '众合科技', '27.23', '1.79', '1', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1450', '000953', '河池化工', '12.77', '5.10', '1', '1431619200', '2015-05-15');
@@ -794,6 +791,81 @@ INSERT INTO `formula_select` VALUES ('1845', '300381', '溢多利', '0.00', '-- 
 INSERT INTO `formula_select` VALUES ('1846', '300403', '地尔汉宇', '68.02', '9.99', '4', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1847', '300420', '五洋科技', '0.00', '--  ', '4', '1431619200', '2015-05-15');
 INSERT INTO `formula_select` VALUES ('1848', '300435', '中泰股份', '69.28', '10.00', '4', '1431619200', '2015-05-15');
+INSERT INTO `formula_select` VALUES ('1849', '600107', '美尔雅', '16.34', '7.93', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1850', '600184', '光电股份', '29.05', '1.36', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1851', '600189', '吉林森工', '13.48', '1.74', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1852', '600261', '阳光照明', '14.15', '2.24', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1853', '600262', '北方股份', '39.09', '1.85', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1854', '600316', '洪都航空', '41.86', '1.80', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1855', '600343', '航天动力', '28.72', '5.24', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1856', '600416', '湘电股份', '22.01', '8.26', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1857', '600433', '冠豪高新', '19.77', '2.65', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1858', '600439', '瑞贝卡', '8.23', '0.73', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1859', '600565', '迪马股份', '11.86', '9.61', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1860', '600698', '湖南天雁', '12.15', '3.93', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1861', '600882', '华联矿业', '13.42', '8.40', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1862', '600895', '张江高科', '26.96', '4.82', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1863', '600975', '新五丰', '22.63', '5.60', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1864', '000007', '零七股份', '28.35', '3.85', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1865', '000017', '深中华A', '17.91', '6.73', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1866', '000020', '深华发Ａ', '19.50', '4.45', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1867', '000546', '金圆股份', '12.29', '4.33', '1', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1868', '002530', '丰东股份', '16.70', '6.44', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1869', '002562', '兄弟科技', '21.14', '5.07', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1870', '002565', '上海绿新', '13.87', '9.99', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1871', '002613', '北玻股份', '13.16', '2.97', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1872', '002674', '兴业科技', '19.46', '5.65', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1873', '002677', '浙江美大', '37.00', '1.09', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1874', '002725', '跃岭股份', '27.97', '3.86', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1875', '300087', '荃银高科', '11.79', '8.46', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1876', '300106', '西部牧业', '19.55', '5.68', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1877', '300108', '双龙股份', '16.80', '8.25', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1878', '300116', '坚瑞消防', '13.99', '4.33', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1879', '300120', '经纬电材', '18.60', '4.49', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1880', '300179', '四方达', '13.43', '6.84', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1881', '300210', '森远股份', '24.73', '4.70', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1882', '300243', '瑞丰高材', '21.70', '4.23', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1883', '300259', '新天科技', '29.00', '7.37', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1884', '300307', '慈星股份', '17.20', '1.18', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1885', '300325', '德威新材', '18.74', '4.81', '2', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1886', '600056', '中国医药', '19.08', '0.10', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1887', '600123', '兰花科创', '10.57', '0.09', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1888', '600131', '岷江水电', '9.73', '4.62', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1889', '600175', '美都能源', '7.29', '1.39', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1890', '600190', '锦州港', '6.64', '0.45', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1891', '600218', '全柴动力', '15.49', '6.83', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1892', '600231', '凌钢股份', '5.73', '2.14', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1893', '600242', '*ST中昌', '12.55', '5.02', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1894', '600252', '中恒集团', '25.02', '3.52', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1895', '600308', '华泰股份', '5.85', '0.52', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1896', '600320', '振华重工', '9.32', '6.51', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1897', '600378', '天科股份', '18.21', '3.88', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1898', '600403', '大有能源', '7.47', '0.54', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1899', '600429', '三元股份', '10.18', '0.99', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1900', '600505', '西昌电力', '11.87', '1.11', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1901', '600548', '深高速', '9.51', '0.32', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1902', '600685', '广船国际', '53.63', '4.81', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1903', '600740', '山西焦化', '8.15', '0.62', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1904', '600792', '云煤能源', '7.86', '1.29', '3', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1905', '600107', '美尔雅', '16.34', '7.93', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1906', '600184', '光电股份', '29.05', '1.36', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1907', '600189', '吉林森工', '13.48', '1.74', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1908', '600261', '阳光照明', '14.15', '2.24', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1909', '600262', '北方股份', '39.09', '1.85', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1910', '600316', '洪都航空', '41.86', '1.80', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1911', '600343', '航天动力', '28.72', '5.24', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1912', '600416', '湘电股份', '22.01', '8.26', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1913', '600433', '冠豪高新', '19.77', '2.65', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1914', '600439', '瑞贝卡', '8.23', '0.73', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1915', '600565', '迪马股份', '11.86', '9.61', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1916', '600698', '湖南天雁', '12.15', '3.93', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1917', '600882', '华联矿业', '13.42', '8.40', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1918', '600895', '张江高科', '26.96', '4.82', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1919', '600975', '新五丰', '22.63', '5.60', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1920', '000007', '零七股份', '28.35', '3.85', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1921', '000017', '深中华A', '17.91', '6.73', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1922', '000020', '深华发Ａ', '19.50', '4.45', '4', '1431964800', '2015-05-19');
+INSERT INTO `formula_select` VALUES ('1923', '000546', '金圆股份', '12.29', '4.33', '4', '1431964800', '2015-05-19');
 
 -- ----------------------------
 -- Table structure for my_attention_stock
@@ -913,6 +985,46 @@ INSERT INTO `my_attention_stock` VALUES ('173', '600108', '20', '10.56', '10.040
 INSERT INTO `my_attention_stock` VALUES ('174', '600633', '20', '19.19', '18.840', '1421337600');
 INSERT INTO `my_attention_stock` VALUES ('180', '002425', '10', 'MACD', '10.920', '1421769600');
 INSERT INTO `my_attention_stock` VALUES ('181', '300344', '10', 'macd', '7.800', '1421769600');
+
+-- ----------------------------
+-- Table structure for organization_viewpoint
+-- ----------------------------
+DROP TABLE IF EXISTS `organization_viewpoint`;
+CREATE TABLE `organization_viewpoint` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `stock_id` varchar(6) CHARACTER SET utf8 DEFAULT NULL,
+  `stock_name` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
+  `stat_date` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `last_agency_rating` varchar(255) CHARACTER SET utf8 DEFAULT NULL COMMENT '最新三条机构评测',
+  `min_price` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `expect_price` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `max_price` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `table_view` text CHARACTER SET utf8 COMMENT 'table 展示内容',
+  `utime` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='机构关点 BY QQ ';
+
+-- ----------------------------
+-- Records of organization_viewpoint
+-- ----------------------------
+INSERT INTO `organization_viewpoint` VALUES ('36', '000001', '平安银行', '0503', '05月03日,国泰君安证券维持评级为强烈看涨|04月30日,群益证券(香港)维持评级为看涨|04月27日,中银国际证券维持评级为看涨', '15.7000', '19.88', '23.6800', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>10</td><td>2</td><td>7</td><td>1</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311078');
+INSERT INTO `organization_viewpoint` VALUES ('37', '000002', '万科A', '0602', '06月02日,海通证券维持评级为看涨|05月26日,瑞银证券维持评级为看涨|05月25日,兴业证券维持评级为看涨', '16.5300', '18.66', '19.6800', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>13</td><td>0</td><td>12</td><td>1</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>11</td><td>1</td><td>8</td><td>2</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311079');
+INSERT INTO `organization_viewpoint` VALUES ('38', '000006', '深振业A', '0602', '06月02日,广发证券维持评级为看涨|', '--', '--', '--', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311081');
+INSERT INTO `organization_viewpoint` VALUES ('39', '000009', '中国宝安', '0410', '04月10日,招商证券维持评级为看涨|', '--', '--', '--', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311087');
+INSERT INTO `organization_viewpoint` VALUES ('40', '000012', '南玻A', '0430', '04月30日,海通证券维持评级为强烈看涨|04月30日,中投证券新增评级看平|04月29日,长江证券维持评级为看平', '--', '18.44', '19.0000', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>5</td><td>1</td><td>2</td><td>2</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311089');
+INSERT INTO `organization_viewpoint` VALUES ('41', '000023', '深天地A', '0506', '05月06日,东方证券新增评级看涨|', '--', '37.2', '37.2000', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311095');
+INSERT INTO `organization_viewpoint` VALUES ('42', '000024', '招商地产', '0504', '05月04日,中银国际证券维持评级为看涨|04月30日,中信建投证券维持评级为看涨|04月30日,中国银河维持评级为看平', '--', '42.35', '42.7000', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>4</td><td>0</td><td>3</td><td>1</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311096');
+INSERT INTO `organization_viewpoint` VALUES ('43', '000026', '飞亚达A', '0527', '05月27日,申万宏源维持评级为强烈看涨|04月21日,中信建投证券维持评级为强烈看涨|04月20日,长城证券维持评级为看平', '--', '22.5', '22.5000', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>4</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311097');
+INSERT INTO `organization_viewpoint` VALUES ('44', '000027', '深圳能源', '0407', '04月07日,中国银河新增评级看平|', '--', '--', '--', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311097');
+INSERT INTO `organization_viewpoint` VALUES ('45', '000028', '国药一致', '0426', '04月26日,国泰君安证券维持评级为强烈看涨|04月13日,国泰君安证券维持评级为强烈看涨|04月13日,海通证券维持评级为看涨', '--', '98.53', '107.6000', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>5</td><td>4</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311100');
+INSERT INTO `organization_viewpoint` VALUES ('46', '000030', '富奥股份', '0504', '05月04日,国泰君安证券新增评级强烈看涨|04月29日,广发证券维持评级为看涨|04月21日,广发证券新增评级看涨', '--', '20.7', '20.7000', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>2</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311101');
+INSERT INTO `organization_viewpoint` VALUES ('47', '000031', '中粮地产', '0418', '04月18日,东莞证券维持评级为看平|', '--', '--', '--', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311102');
+INSERT INTO `organization_viewpoint` VALUES ('48', '000033', '*ST新都', '0410', '04月10日,兴业证券新增评级强烈看涨|', '--', '--', '--', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311103');
+INSERT INTO `organization_viewpoint` VALUES ('49', '000035', '中国天楹', '0521', '05月21日,民生证券新增评级看涨|05月11日,民生证券新增评级看涨|', '--', '--', '--', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>2</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311104');
+INSERT INTO `organization_viewpoint` VALUES ('50', '000036', '华联控股', '0420', '04月20日,兴业证券新增评级强烈看涨|', '--', '--', '--', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311105');
+INSERT INTO `organization_viewpoint` VALUES ('51', '000039', '中集集团', '0601', '06月01日,广发证券维持评级为看涨|05月21日,广发证券维持评级为看涨|04月30日,群益证券(香港)维持评级为看涨', '--', '33', '33.0000', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>4</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311109');
+INSERT INTO `organization_viewpoint` VALUES ('52', '000042', '中洲控股', '0403', '04月03日,中银国际证券维持评级为看涨|', '--', '29.8', '29.8000', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311110');
+INSERT INTO `organization_viewpoint` VALUES ('53', '000045', '深纺织A', '0505', '05月05日,国泰君安证券维持评级为强烈看涨|', '--', '22', '22.0000', '<table cellspacing=\"0\" cellpadding=\"0\">\r\n                                <tbody><tr class=\"th\"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>\r\n                                <tr id=\"agents-report-count\"><td class=\"bg1\">2015年06月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr class=\"bg1\"><td>2015年05月</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                                <tr><td class=\"bg1\">2015年04月</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\r\n                              </tbody></table>', '1433311112');
 
 -- ----------------------------
 -- Table structure for stock
@@ -3750,7 +3862,7 @@ CREATE TABLE `stock_pl` (
   `pl_type` tinyint(2) NOT NULL DEFAULT '0' COMMENT '0好，1坏',
   `ctime` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17623 DEFAULT CHARSET=utf8 COMMENT=' 千股千评- 带“进”，“加”，“减”，“出”等关键字';
+) ENGINE=MyISAM AUTO_INCREMENT=17737 DEFAULT CHARSET=utf8 COMMENT=' 千股千评- 带“进”，“加”，“减”，“出”等关键字';
 
 -- ----------------------------
 -- Records of stock_pl
@@ -18065,6 +18177,120 @@ INSERT INTO `stock_pl` VALUES ('17619', '900943', '多头格局', '0', '14315328
 INSERT INTO `stock_pl` VALUES ('17620', '900948', '走势属多头势', '0', '1431532800');
 INSERT INTO `stock_pl` VALUES ('17621', '900951', '多头格局', '0', '1431532800');
 INSERT INTO `stock_pl` VALUES ('17622', '900952', '暂时多头格局', '0', '1431532800');
+INSERT INTO `stock_pl` VALUES ('17623', '000001', '下行空间不大&sbquo;逢低吸纳。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17624', '000001', '下行空间不大&sbquo;逢低吸纳。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17625', '000002', '上行有阻力&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17626', '000004', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17627', '000005', '主力有退却意思&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17628', '000006', '走势形态良好&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17629', '000009', '走势形态良好&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17630', '000010', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17631', '000011', '上涨态势良好&sbquo;建议追入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17632', '000012', '多头格局&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17633', '000014', '强势特征明显&sbquo;跟进为主。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17634', '000017', '上涨格局&sbquo;吸纳。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17635', '000019', '多头市道&sbquo;逢低进场。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17636', '000023', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17637', '000025', '上涨态势良好&sbquo;入货为宜。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17638', '000026', '走势属多头势&sbquo;介入为主。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17639', '000027', '多头格局&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17640', '000028', '走势形态良好&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17641', '000029', '上涨态势良好&sbquo;建议追入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17642', '000030', '上涨态势良好&sbquo;入货为宜。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17643', '000031', '上涨格局&sbquo;近期介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17644', '000032', '走势形态良好&sbquo;跟进为主。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17645', '000035', '主力实力强大&sbquo;建议追入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17646', '000036', '走势形态良好&sbquo;跟进为主。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17647', '000037', '上涨态势良好&sbquo;入货为宜。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17648', '000039', '走势属多头势&sbquo;建议追入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17649', '000001', '下行空间不大&sbquo;逢低吸纳。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17650', '000001', '下行空间不大&sbquo;逢低吸纳。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17651', '000002', '上行有阻力&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17652', '000001', '下行空间不大&sbquo;逢低吸纳。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17653', '000001', '下行空间不大&sbquo;逢低吸纳。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17654', '000002', '上行有阻力&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17655', '000004', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17656', '000005', '主力有退却意思&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17657', '000006', '走势形态良好&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17658', '000001', '下行空间不大&sbquo;逢低吸纳。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17659', '000001', '下行空间不大&sbquo;逢低吸纳。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17660', '000002', '上行有阻力&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17661', '000004', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17662', '000005', '主力有退却意思&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17663', '000006', '走势形态良好&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17664', '000009', '走势形态良好&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17665', '000010', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17666', '000011', '上涨态势良好&sbquo;建议追入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17667', '000012', '多头格局&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17668', '000014', '强势特征明显&sbquo;跟进为主。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17669', '000017', '上涨格局&sbquo;吸纳。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17670', '000019', '多头市道&sbquo;逢低进场。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17671', '000023', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17672', '000025', '上涨态势良好&sbquo;入货为宜。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17673', '000026', '走势属多头势&sbquo;介入为主。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17674', '000027', '多头格局&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17675', '000028', '走势形态良好&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17676', '000029', '上涨态势良好&sbquo;建议追入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17677', '000030', '上涨态势良好&sbquo;入货为宜。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17678', '000031', '上涨格局&sbquo;近期介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17679', '000001', '下行空间不大&sbquo;逢低吸纳。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17680', '000001', '下行空间不大&sbquo;逢低吸纳。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17681', '000002', '上行有阻力&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17682', '000004', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17683', '000005', '主力有退却意思&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17684', '000006', '走势形态良好&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17685', '000009', '走势形态良好&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17686', '000010', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17687', '000011', '上涨态势良好&sbquo;建议追入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17688', '000012', '多头格局&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17689', '000014', '强势特征明显&sbquo;跟进为主。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17690', '000001', '下行空间不大&sbquo;逢低吸纳。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17691', '000001', '下行空间不大&sbquo;逢低吸纳。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17692', '000002', '上行有阻力&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17693', '000004', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17694', '000005', '主力有退却意思&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17695', '000006', '走势形态良好&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17696', '000009', '走势形态良好&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17697', '000001', '下行空间不大&sbquo;逢低吸纳。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17698', '000001', '下行空间不大&sbquo;逢低吸纳。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17699', '000002', '上行有阻力&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17700', '000004', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17701', '000005', '主力有退却意思&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17702', '000006', '走势形态良好&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17703', '000009', '走势形态良好&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17704', '000010', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17705', '000011', '上涨态势良好&sbquo;建议追入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17706', '000012', '多头格局&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17707', '000001', '下行空间不大&sbquo;逢低吸纳。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17708', '000001', '下行空间不大&sbquo;逢低吸纳。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17709', '000002', '上行有阻力&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17710', '000004', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17711', '000005', '主力有退却意思&sbquo;近期高抛。', '1', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17712', '000006', '走势形态良好&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17713', '000009', '走势形态良好&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17714', '000010', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17715', '000011', '上涨态势良好&sbquo;建议追入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17716', '000012', '多头格局&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17717', '000014', '强势特征明显&sbquo;跟进为主。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17718', '000017', '上涨格局&sbquo;吸纳。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17719', '000019', '多头市道&sbquo;逢低进场。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17720', '000023', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17721', '000025', '上涨态势良好&sbquo;入货为宜。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17722', '000026', '走势属多头势&sbquo;介入为主。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17723', '000027', '多头格局&sbquo;建议跟进。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17724', '000028', '走势形态良好&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17725', '000029', '上涨态势良好&sbquo;建议追入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17726', '000030', '上涨态势良好&sbquo;入货为宜。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17727', '000031', '上涨格局&sbquo;近期介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17728', '000032', '走势形态良好&sbquo;跟进为主。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17729', '000035', '主力实力强大&sbquo;建议追入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17730', '000036', '走势形态良好&sbquo;跟进为主。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17731', '000037', '上涨态势良好&sbquo;入货为宜。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17732', '000039', '走势属多头势&sbquo;建议追入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17733', '000040', '多方力量强大&sbquo;建议介入。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17734', '000042', '上涨态势良好&sbquo;入货为宜。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17735', '000043', '主力实力强大&sbquo;入货为宜。', '0', '1433260800');
+INSERT INTO `stock_pl` VALUES ('17736', '000045', '主力拉抬明显&sbquo;建议追入。', '0', '1433260800');
 
 -- ----------------------------
 -- Table structure for vol_double
