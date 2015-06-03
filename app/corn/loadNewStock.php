@@ -86,7 +86,7 @@ function getStockListBYeastmoney() {
  * 获取机构关点
  * @param type $stockId
  */
-function organizationViewpointByQQ($stockId, $type) {
+function organizationViewpointByQQ($stockId, $type,$attentionPrice) {
   //  $type = 'sz';
   //  $stockId = '300170';
     $url = "http://gu.qq.com/" . $type . $stockId;

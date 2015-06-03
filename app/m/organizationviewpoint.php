@@ -19,5 +19,11 @@ class m_organizationviewpoint extends m_mabstract
             $id = $this->db->insert('organization_viewpoint', $strArr);
         }
     }
+    
+    public function getList()
+    {
+        return  $this->db->get_all("select * from organization_viewpoint where stat_date >= ".date('md',strtotime('-30 day'))." group by stat_date desc ");
+        
+    }
 
 }
