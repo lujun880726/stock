@@ -295,6 +295,7 @@ function fileGetContents($url) {
     );
     $ctx = stream_context_create($timeout);
     echo $url;
-    return file_get_contents($url, 0, $ctx);
+    $a =  file_get_contents($url, 0, $ctx);
+    return $a;
 }
 
