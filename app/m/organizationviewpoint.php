@@ -22,7 +22,7 @@ class m_organizationviewpoint extends m_mabstract
     
     public function getList()
     {
-        return  $this->db->get_all("select * from organization_viewpoint where stat_date >= ".date('md',strtotime('-30 day'))." group by stat_date desc ");
+        return  $this->db->get_all("select * from organization_viewpoint where stat_date >= ".date('md',strtotime('-30 day'))." order by stat_date desc ");
         
     }
 
