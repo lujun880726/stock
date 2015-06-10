@@ -25,7 +25,7 @@ function getStockListBYeastmoney() {
     $urlEnd = '&ps=50&js=var%20vevHhpuG=(x)&mkt=0&rt=';
     for ($i = 1; $i <= $page; $i++) {
         $endUrl = $url . $i . $urlEnd . time();
-        
+
         $data = fileGetContents($endUrl);
         if (empty($data)) {
             sleep(60);
@@ -51,7 +51,7 @@ function getStockListBYeastmoney() {
                     } else {
                         $type = 'sh';
                     }
-                    
+
 
                     if (empty($row)) {
                         $objBase->db->insert('stock', array('stock_id' => $tmp1[0], 'type' => $type, 'create_time' => strtotime("today"), 'name' => $tmp1[1]));
@@ -62,7 +62,7 @@ function getStockListBYeastmoney() {
                     }
 
                     organizationViewpointByQQ($tmp1[0], $type);
-                    
+
                     $goodStrArr = array('进', '加', '入', '吸', '多', '增', '持有');
                     $badStrArr = array('离', '减', '出', '抛', '空');
                     str_replace($goodStrArr, '1', $tmp1[3], $goodcnt);
@@ -87,58 +87,60 @@ function getStockListBYeastmoney() {
  * @param type $stockId
  */
 function organizationViewpointByQQ($stockId, $type) {
-  //  $type = 'sz';
-  //  $stockId = '300170';
+    //  $type = 'sz';
+    //  $stockId = '300170';
     $url = "http://gu.qq.com/" . $type . $stockId;
     $data = fileGetContents($url);
     if (empty($data)) {
         $data = fileGetContents($url);
     }
     if ($data) {
-        str_replace('g_StockRating', '', $data,$cnt);
+        str_replace('g_StockRating', '', $data, $cnt);
         if ($cnt < 1) {
             return '';
         }
         $res = trim(getStr($data, 'g_StockRating =', ';'));
-        
-        
+
+
         $tmp = explode(":'", $res);
-        if (getAJ($tmp[1],"',") == '--'  || empty(getAJ($tmp[1],"',")))
-        {
+
+        $tt1 = getAJ($tmp[1], "',");
+        $tt2 = getAJ($tmp[1], "',");
+        if ($tt1 == '--' || empty($tt2)) {
             return '';
         }
-        
-        $s1E = explode("|", getAJ($tmp[10],"'"));
-        $s2E = explode("|", getAJ($tmp[12],"'"));
-        $s3E = explode("|", getAJ($tmp[14],"'"));
-        
+
+
+        $s1E = explode("|", getAJ($tmp[10], "'"));
+        $s2E = explode("|", getAJ($tmp[12], "'"));
+        $s3E = explode("|", getAJ($tmp[14], "'"));
+
         $strArr = array(
-            'stock_id' => getAJ($tmp[1],"',"),
-            'stock_name' => getAJ($tmp[2],"',"),
-            'stat_date' => str_replace(array('月','日'),'',getAJ($tmp[3],"',")),
-            'last_agency_rating' => getAJ($tmp[7],"'"),
-            'min_price' => getAJ($tmp[5],"',"),
-            'expect_price' => getAJ($tmp[4],"',"),
-            'max_price' => getAJ($tmp[6],"',"),
+            'stock_id' => getAJ($tmp[1], "',"),
+            'stock_name' => getAJ($tmp[2], "',"),
+            'stat_date' => str_replace(array('月', '日'), '', getAJ($tmp[3], "',")),
+            'last_agency_rating' => getAJ($tmp[7], "'"),
+            'min_price' => getAJ($tmp[5], "',"),
+            'expect_price' => getAJ($tmp[4], "',"),
+            'max_price' => getAJ($tmp[6], "',"),
             'table_view' => '<table cellspacing="0" cellpadding="0">
                                 <tbody><tr class="th"><td>&nbsp;</td><td>报告数</td><td>强烈看涨</td><td>看涨</td><td>看平</td><td>看跌</td><td>强烈看跌</td></tr>
-                                <tr id="agents-report-count"><td class="bg1">'.getAJ($tmp[9],"'").'</td><td>' . $s1E[0] .'</td><td>' . $s1E[1] .'</td><td>' . $s1E[2] .'</td><td>' . $s1E[3] .'</td><td>' . $s1E[4] .'</td><td>' . $s1E[5] .'</td></tr>
-                                <tr class="bg1"><td>'.getAJ($tmp[11],"'").'</td><td>' . $s2E[0] .'</td><td>' . $s2E[1] .'</td><td>' . $s2E[2] .'</td><td>' . $s2E[3] .'</td><td>' . $s2E[4] .'</td><td>' . $s2E[5] .'</td></tr>
-                                <tr><td class="bg1">'.getAJ($tmp[13],"'").'</td><td>' . $s3E[0] .'</td><td>' . $s3E[1] .'</td><td>' . $s3E[2] .'</td><td>' . $s3E[3] .'</td><td>' . $s3E[4] .'</td><td>' . $s3E[5] .'</td></tr>
+                                <tr id="agents-report-count"><td class="bg1">' . getAJ($tmp[9], "'") . '</td><td>' . $s1E[0] . '</td><td>' . $s1E[1] . '</td><td>' . $s1E[2] . '</td><td>' . $s1E[3] . '</td><td>' . $s1E[4] . '</td><td>' . $s1E[5] . '</td></tr>
+                                <tr class="bg1"><td>' . getAJ($tmp[11], "'") . '</td><td>' . $s2E[0] . '</td><td>' . $s2E[1] . '</td><td>' . $s2E[2] . '</td><td>' . $s2E[3] . '</td><td>' . $s2E[4] . '</td><td>' . $s2E[5] . '</td></tr>
+                                <tr><td class="bg1">' . getAJ($tmp[13], "'") . '</td><td>' . $s3E[0] . '</td><td>' . $s3E[1] . '</td><td>' . $s3E[2] . '</td><td>' . $s3E[3] . '</td><td>' . $s3E[4] . '</td><td>' . $s3E[5] . '</td></tr>
                               </tbody></table>',
             'utime' => time(),
         );
         $objBase = m('m_organizationviewpoint');
         $objBase->upOrRep($strArr);
-            
     }
 }
 
-function getAJ($data,$exStr,$reKey = 0)
-{
-    $tmp = explode($exStr,$data);
+function getAJ($data, $exStr, $reKey = 0) {
+    $tmp = explode($exStr, $data);
     return $tmp[$reKey];
 }
+
 ///------------------------------------------------------------------------------------------------------------------------------------------------------------
 /**
  * 调用存储过程
@@ -295,7 +297,6 @@ function fileGetContents($url) {
     );
     $ctx = stream_context_create($timeout);
     echo $url;
-    $a =  file_get_contents($url, 0, $ctx);
+    $a = file_get_contents($url, 0, $ctx);
     return $a;
 }
-
