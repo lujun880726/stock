@@ -114,11 +114,12 @@ function organizationViewpointByQQ($stockId, $type) {
         $s1E = explode("|", getAJ($tmp[10], "'"));
         $s2E = explode("|", getAJ($tmp[12], "'"));
         $s3E = explode("|", getAJ($tmp[14], "'"));
-
+        
+        $year  = explode('年',getAJ($tmp[9], "'"));
         $strArr = array(
             'stock_id' => getAJ($tmp[1], "',"),
             'stock_name' => getAJ($tmp[2], "',"),
-            'stat_date' => str_replace(array('月', '日'), '', getAJ($tmp[3], "',")),
+            'stat_date' => $year[0] . str_replace(array('月', '日'), '', getAJ($tmp[3], "',")),
             'last_agency_rating' => getAJ($tmp[7], "'"),
             'min_price' => getAJ($tmp[5], "',"),
             'expect_price' => getAJ($tmp[4], "',"),
