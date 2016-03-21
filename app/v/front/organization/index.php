@@ -4,20 +4,14 @@
         $.getJSON(
                 "/attention/getNow/" + stock_id + ".html",
                 function(data) {
-                    $('#nowprice_' + stock_id).html(data.msg.harvest);
-                    tmp_now = (parseFloat(data.msg.harvest) - parseFloat($('#price_' + stock_id).html())) / parseFloat($('#price_' + stock_id).html()) * 100;
-                    $('#nowrate_' + stock_id).html(tmp_now + '% ');
-                    $('#qgqp_' + stock_id).html(data.msg.pl);
-                    if (tmp_now < 0)
-                    {
-                        $('#nowrate_' + stock_id).attr('style', 'color: red');
-                    }
-                    nowzf  = (parseFloat(data.msg.harvest) - parseFloat(data.msg.lastprice)) / parseFloat(data.msg.lastprice) * 100;
-                    $('#nowzf_' + stock_id).html( nowzf  + '% ');
-                    if (nowzf < 0)
+                    $('#nowprice_' + stock_id).html(data.msg.now_price);
+					$('#nowzf_' + stock_id).html( data.msg.now_zf  + '% ');
+                    if (data.msg.now_zf < 0)
                     {
                         $('#nowzf_' + stock_id).attr('style', 'color: red');
                     }
+					$('#qgqp_' + stock_id).html(data.msg.pl);
+
                 }
         );
     }
