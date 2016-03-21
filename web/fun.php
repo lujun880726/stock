@@ -28,7 +28,7 @@ function getStockAPI($stockId, $stockTYpe)
     $top      = $tmp['33'];
     $footer   = $tmp['34'];
     $harvest  = $tmp['37'];
-    $vol      = $tmp['36']);
+    $vol      = $tmp['36'];
     $lastprice      = $tmp['3'];
     $tempTIme = explode(' ', str_replace(array('"', '"'), '', $tmp['11']));
     $dayArr   = array(
