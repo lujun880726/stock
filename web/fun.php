@@ -15,14 +15,14 @@
  */
 function getStockAPI($stockId, $stockTYpe)
 {
-    $url  = "http://bdcjhq.hexun.com/quote?s2=" . $stockId . "." . $stockTYpe;
+    $url  = "http://qt.gtimg.cn/q=" . $stockTYpe . $stockId;
     $data = '';
     $data = file_get_contents($url);
     if (empty($data)) {
         return -1;
     }
-    $strInfo  = getStr($data, 'bdcallback(', ')}');
-    $tmp      = explode(":", $strInfo);
+    $strInfo  = getStr($data, 'v_sz000858="', '";');
+    $tmp      = explode("~", $strInfo);
     $name     = str_replace(array('",pc', '"'), '', $tmp['2']);
     $open     = str_replace(array('",vo', '"'), '', $tmp['4']);
     $top      = str_replace(array('",lo', '"'), '', $tmp['7']);
