@@ -4,6 +4,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ * http://blog.csdn.net/ustbhacker/article/details/8365756
  */
 
 
@@ -27,7 +28,7 @@ function getStockAPI($stockId, $stockTYpe)
     $open     = $tmp['5'];
     $top      = $tmp['33'];
     $footer   = $tmp['34'];
-    $harvest  = $tmp['37'];
+    $harvest  = $tmp['3'];
     $vol      = $tmp['36'];
     $lastprice      = $tmp['3'];
     $tempTIme = explode(' ', str_replace(array('"', '"'), '', $tmp['11']));
