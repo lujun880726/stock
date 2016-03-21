@@ -24,7 +24,7 @@ function getStockAPI($stockId, $stockTYpe)
     $strInfo  = getStr($data, '="', '";');
     $tmp      = explode("~", $strInfo);
     $name     = $tmp['1'];
-    $open     = s$tmp['5'];
+    $open     = $tmp['5'];
     $top      = $tmp['33'];
     $footer   = $tmp['34'];
     $harvest  = $tmp['37'];
