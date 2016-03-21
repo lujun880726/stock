@@ -24,11 +24,6 @@ function getStockAPI($stockId, $stockTYpe)
     }
     $strInfo  = getStr($data, '="', '";');
     $tmp      = explode("~", $strInfo);
-    $name     = $tmp['1']; //名字
-    $open     = $tmp['5']; //开
-    $top      = $tmp['33']; //收
-    $footer   = $tmp['34'];  
-      = $tmp['3']; // 当前
     $dayArr   = array(
         'stock_id'  => $stockId,
         'type'      => $stockTYpe,
