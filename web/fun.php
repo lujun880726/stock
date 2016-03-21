@@ -40,6 +40,7 @@ function getStockAPI($stockId, $stockTYpe)
         'top'       => $tmp['33'], //最低
         'footer'    => $tmp['34'], //最低
         'now_price'   =>  $tmp['3'], // 当前
+        'now_zf'   =>  $tmp['32'], // 涨幅
     );
     return $dayArr;
 }
