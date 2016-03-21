@@ -21,15 +21,15 @@ function getStockAPI($stockId, $stockTYpe)
     if (empty($data)) {
         return -1;
     }
-    $strInfo  = getStr($data, 'v_sz000858="', '";');
+    $strInfo  = getStr($data, '="', '";');
     $tmp      = explode("~", $strInfo);
-    $name     = str_replace(array('",pc', '"'), '', $tmp['2']);
-    $open     = str_replace(array('",vo', '"'), '', $tmp['4']);
-    $top      = str_replace(array('",lo', '"'), '', $tmp['7']);
-    $footer   = str_replace(array('",la', '"'), '', $tmp['8']);
-    $harvest  = str_replace(array('",type', '"'), '', $tmp['9']);
-    $vol      = str_replace(array('",tu', '"'), '', $tmp['5']);
-    $lastprice      = str_replace(array('",op', '"'), '', $tmp['3']);
+    $name     = $tmp['1'];
+    $open     = s$tmp['5'];
+    $top      = $tmp['33'];
+    $footer   = $tmp['34'];
+    $harvest  = $tmp['37'];
+    $vol      = $tmp['36']);
+    $lastprice      = $tmp['3'];
     $tempTIme = explode(' ', str_replace(array('"', '"'), '', $tmp['11']));
     $dayArr   = array(
         'stock_id'  => $stockId,
