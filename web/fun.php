@@ -24,14 +24,11 @@ function getStockAPI($stockId, $stockTYpe)
     }
     $strInfo  = getStr($data, '="', '";');
     $tmp      = explode("~", $strInfo);
-    $name     = $tmp['1'];
-    $open     = $tmp['5'];
-    $top      = $tmp['33'];
-    $footer   = $tmp['34'];
-    $harvest  = $tmp['3'];
-    $vol      = $tmp['36'];
-    $lastprice      = $tmp['3'];
-    $tempTIme = explode(' ', str_replace(array('"', '"'), '', $tmp['11']));
+    $name     = $tmp['1']; //名字
+    $open     = $tmp['5']; //开
+    $top      = $tmp['33']; //收
+    $footer   = $tmp['34'];  
+      = $tmp['3']; // 当前
     $dayArr   = array(
         'stock_id'  => $stockId,
         'type'      => $stockTYpe,
@@ -39,12 +36,10 @@ function getStockAPI($stockId, $stockTYpe)
         'week_time' => date('YW'),
         'mon_time'  => date('Ym'),
         'year_time' => date('Y'),
-        'open'      => $open,
-        'top'       => $top,
-        'footer'    => $footer,
-        'harvest'   => $harvest,
-        'vol'       => $vol,
-        'lastprice' => $lastprice,
+        'open'      => $tmp['5'],//开
+        'top'       => $tmp['33'], //最低
+        'footer'    => $tmp['34'], //最低
+        'now_price'   =>  $tmp['3'], // 当前
     );
     return $dayArr;
 }
